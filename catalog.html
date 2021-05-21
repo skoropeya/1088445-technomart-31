@@ -76,14 +76,15 @@
             <form action="https://echo.htmlacademy.ru" method="get" class="form-filters">
                 <fieldset class="filter-price">
                     <legend>Цена:</legend>
-                    <!-- что за хрень и как ее делать.... -->
-                    <label for="filter-price-range" class="visible-hidden"></label>
-                    <input type="range" name="filter-price-range" id="filter-price-range" min="0" max="35000" step="100" value="30000">
-    
-
+                    <!-- здесь долен быть бегунок -->
+                    <p>
+                        <label for="filter-price-range-min" class="visually-hidden"></label>
+                        <input type="text" name="filter-price-range-min" id="filter-price-range-min" value="0"> - 
+                        <label for="filter-price-range-max" class="visually-hidden"></label>
+                        <input type="text" name="filter-price-range-max" id="filter-price-range-max" value="30000">
+                    </p>
                 </fieldset>
-    
-    
+
                 <fieldset class="filter-brand">
                     <legend>Производители:</legend>
                     <ul class="filter-brand-list">
@@ -284,6 +285,14 @@
             <p>В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
 
         </aside>
+
+        <!-- всплывающее окно "Товар добавлен в корзину" по умолчанию скрыто -->
+        <section class="good-in-busket visually-hidden">
+            <h2>Товар добавлен в корзину!</h2>
+            <button type="button" class="btn-close">Закрыть</button>
+            <button type="button" class="make-order">Оформить заказ</button>
+            <button type="button" class="more-shopping">Продолжить покупки</button>
+        </section>
     </main>
 
     <footer class="main-footer">
