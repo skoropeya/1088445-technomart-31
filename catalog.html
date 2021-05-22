@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог</title>
+    <title>Каталог Техномарт</title>
   </head>
   <body>
 
@@ -16,9 +16,9 @@
                 <input type="text" name="search-message" id="header-search-message" placeholder="Поиск:">
             </form>
             <ul class="users-menu">
-                <li class="users-menu-marks"><a href="blank.html">Закладки: <span class="count-marks">0</span></a></li>
-                <li class="users-menu-busket"><a href="blank.html">Корзина: <span class="count-goods">0</span></a></li>
-                <li class="users-menu-order"><a href="blank.html">Оформить заказ</a></li>
+                <li><a href="blank.html" class="users-menu-link users-menu-marks">Закладки: <span class="count-marks">0</span></a></li>
+                <li><a href="blank.html" class="users-menu-link users-menu-busket">Корзина: <span class="count-goods">0</span></a></li>
+                <li><a href="blank.html" class="users-menu-link users-menu-order">Оформить заказ</a></li>
             </ul>
         </section>
 
@@ -29,21 +29,16 @@
               <a href="tel:+78005558628">+7 800 555-86-28</a>
               <address>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</address>
             </p>
-            <!-- пользователь не авторизован, кнопки входа и регистрации -->
-            <p class="main-header-bottom-user main-header-bottom-user-open">
-              <a href="blank.html" class="btn-user btn-enter">Войти</a>
-              <a href="blank.html" class="btn-user btn-registration">Регистрация</a>
-            </p>
 
             <!-- пользователь авторизован -->
-            <p class="main-header-bottom-user visually-hidden">
-              <a href="blank.html" class="user-profile">Равшан Джамшутович</a>
-              <a href="blank.html" class="user-exit">Выход</a>
-              <a href="blank.html" class="user-orders">Мои заказы</a>
-              <a href="blank.html" class="user-cabinet">Личный кабинет</a>
-            </p>
-            
-        
+            <p class="main-header-bottom-user main-header-bottom-user-authorization">
+                <a href="blank.html" class="user-profile">Равшан Джамшутович</a>
+                <a href="blank.html" class="user-exit">Выход</a>
+                <ul>
+                    <li><a href="blank.html" class="user-link user-link-orders">Мои заказы</a></li>
+                    <li><a href="blank.html" class="user-link user-link-cabinet">Личный кабинет</a></li>
+                </ul>
+              </p>
 
             <nav class="main-header-nav">
                 <ul class="header-nav-list">
@@ -153,106 +148,106 @@
 
             <ul class="goods-list">
                 <li class="good-item">
-                    <h3>Перфоратор BOSCH BFG 6000</h3>
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 6000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="#" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
                     <button type="button" class="btn-buy visually-hidden">Купить</button>
                     <button type="button" class="btn-mark visually-hidden">В закладки</button>
 
-                    <p class="good-item-old-price">30500 р.</p>
+                    <p class="good-item-old-price"><del>30500 р.</del></p>
                     <p class="good-item-new-price">25500 р.</p>
                 </li>
 
                 <li class="good-item">
-                    <h3>Перфоратор BOSCH BFG 6000</h3>
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 6000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="#" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
                     <button type="button" class="btn-buy visually-hidden">Купить</button>
                     <button type="button" class="btn-mark visually-hidden">В закладки</button>
 
-                    <p class="good-item-old-price">30500 р.</p>
+                    <p class="good-item-old-price"><del>30500 р.</del></p>
                     <p class="good-item-new-price">25500 р.</p>
                 </li>
 
                 <!-- значок new добавить средствами CSS -->
                 <li class="good-item good-item-new">
-                    <h3>Перфоратор BOSCH BFG 6000</h3>
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 6000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="#" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
                     <button type="button" class="btn-buy visually-hidden">Купить</button>
                     <button type="button" class="btn-mark visually-hidden">В закладки</button>
 
-                    <p class="good-item-old-price">30500 р.</p>
+                    <p class="good-item-old-price"><del>30500 р.</del></p>
                     <p class="good-item-new-price">25500 р.</p>
                 </li>
 
                 <!-- значок new добавить средствами CSS -->
                 <li class="good-item good-item-new">
-                    <h3>Перфоратор BOSCH BFG 3000</h3>
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 3000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="#" alt="Перфоратор BOSCH BFG 3000" width="144" height="128">
                     <button type="button" class="btn-buy visually-hidden">Купить</button>
                     <button type="button" class="btn-mark visually-hidden">В закладки</button>
 
-                    <p class="good-item-old-price">22500 р.</p>
+                    <p class="good-item-old-price"><del>22500 р.</del></p>
                     <p class="good-item-new-price">15500 р.</p>
                 </li>
 
                 <li class="good-item">
-                    <h3>Перфоратор BOSCH BFG 6000</h3>
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 6000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="#" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
                     <button type="button" class="btn-buy visually-hidden">Купить</button>
                     <button type="button" class="btn-mark visually-hidden">В закладки</button>
 
-                    <p class="good-item-old-price">30500 р.</p>
+                    <p class="good-item-old-price"><del>30500 р.</del></p>
                     <p class="good-item-new-price">25500 р.</p>
                 </li>
                 
                 <!-- значок new добавить средствами CSS -->
                 <li class="good-item good-item-new">
-                    <h3>Перфоратор BOSCH BFG 2000</h3>
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 2000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="#" alt="Перфоратор BOSCH BFG 2000" width="144" height="128">
                     <button type="button" class="btn-buy visually-hidden">Купить</button>
                     <button type="button" class="btn-mark visually-hidden">В закладки</button>
 
-                    <p class="good-item-old-price"></p>
+                    <p class="good-item-old-price"><del></del></p>
                     <p class="good-item-new-price">25500 р.</p>
                 </li>
 
                 <!-- значок new добавить средствами CSS -->
                 <li class="good-item good-item-new">
-                    <h3>Перфоратор BOSCH BFG 3000</h3>
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 3000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="#" alt="Перфоратор BOSCH BFG 3000" width="144" height="128">
                     <button type="button" class="btn-buy visually-hidden">Купить</button>
                     <button type="button" class="btn-mark visually-hidden">В закладки</button>
 
-                    <p class="good-item-old-price">22500 р.</p>
+                    <p class="good-item-old-price"><del>22500 р.</del></p>
                     <p class="good-item-new-price">15500 р.</p>
                 </li>
 
                 <li class="good-item">
-                    <h3>Перфоратор BOSCH BFG 6000</h3>
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 6000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="#" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
                     <button type="button" class="btn-buy visually-hidden">Купить</button>
                     <button type="button" class="btn-mark visually-hidden">В закладки</button>
 
-                    <p class="good-item-old-price">30500 р.</p>
+                    <p class="good-item-old-price"><del>30500 р.</del></p>
                     <p class="good-item-new-price">25500 р.</p>
                 </li>
                 
                 <!-- значок new добавить средствами CSS -->
                 <li class="good-item good-item-new">
-                    <h3>Перфоратор BOSCH BFG 2000</h3>
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 2000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="#" alt="Перфоратор BOSCH BFG 2000" width="144" height="128">
                     <button type="button" class="btn-buy visually-hidden">Купить</button>
                     <button type="button" class="btn-mark visually-hidden">В закладки</button>
 
-                    <p class="good-item-old-price"></p>
+                    <p class="good-item-old-price"><del></del></p>
                     <p class="good-item-new-price">25500 р.</p>
                 </li>
             </ul>
@@ -278,13 +273,13 @@
 
         </section>
 
-        <aside class="about-goods">
+        <section class="about-goods">
             <h2>Пара слов о перфораторах</h2>
-            <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
-            <p>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.</p>
-            <p>В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+            <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+            В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
 
-        </aside>
+        </section>
 
         <!-- всплывающее окно "Товар добавлен в корзину" по умолчанию скрыто -->
         <section class="good-in-busket visually-hidden">
@@ -301,17 +296,20 @@
             <address>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br>+7 800 555-86-28</address>
             
             <nav class="main-footer-nav">
-                <!-- может сделать два разных списка?? или стилизовать потом четные и нечетные отдельно???  -->
-                <ul class="footer-nav-list">
+                <!-- два  списка навигации  -->
+                <ul class="footer-nav-list-top">
                     <li class="footer-nav-item"><a href="blank.html">Компания</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Материалы</a></li>
                     <li class="footer-nav-item"><a href="blank.html">Новости</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Техника</a></li>
                     <li class="footer-nav-item"><a href="catalog.html">Каталог</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Инструмент</a></li>
                     <li class="footer-nav-item"><a href="blank.html">Доставка</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Спецпредложения</a></li>
                     <li class="footer-nav-item"><a href="blank.html">Контакты</a></li>
+                </ul>
+
+                <ul class="footer-nav-list-bottom">
+                    <li class="footer-nav-item"><a href="blank.html">Материалы</a></li>
+                    <li class="footer-nav-item"><a href="blank.html">Техника</a></li>
+                    <li class="footer-nav-item"><a href="blank.html">Инструмент</a></li>
+                    <li class="footer-nav-item"><a href="blank.html">Спецпредложения</a></li>
                 </ul>
             </nav>
         </section>

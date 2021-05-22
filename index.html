@@ -16,9 +16,9 @@
                 <input type="text" name="search-message" id="header-search-message" placeholder="Поиск:">
             </form>
             <ul class="users-menu">
-                <li class="users-menu-marks"><a href="blank.html">Закладки: <span class="count-marks">0</span></a></li>
-                <li class="users-menu-busket"><a href="blank.html">Корзина: <span class="count-goods">0</span></a></li>
-                <li class="users-menu-order"><a href="blank.html">Оформить заказ</a></li>
+                <li><a href="blank.html" class="users-menu-link users-menu-marks">Закладки: <span class="count-marks">0</span></a></li>
+                <li><a href="blank.html" class="users-menu-link users-menu-busket">Корзина: <span class="count-goods">0</span></a></li>
+                <li><a href="blank.html" class="users-menu-link users-menu-order">Оформить заказ</a></li>
             </ul>
         </section>
 
@@ -30,21 +30,11 @@
               <address>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</address>
             </p>
             <!-- пользователь не авторизован, кнопки входа и регистрации -->
-            <p class="main-header-bottom-user main-header-bottom-user-open">
+            <p class="main-header-bottom-user">
               <a href="blank.html" class="btn-user btn-enter">Войти</a>
               <a href="blank.html" class="btn-user btn-registration">Регистрация</a>
             </p>
-
-            <!-- пользователь авторизован -->
-            <p class="main-header-bottom-user visually-hidden">
-              <a href="blank.html" class="user-profile">Равшан Джамшутович</a>
-              <a href="blank.html" class="user-exit">Выход</a>
-              <a href="blank.html" class="user-orders">Мои заказы</a>
-              <a href="blank.html" class="user-cabinet">Личный кабинет</a>
-            </p>
-            
-        
-
+      
             <nav class="main-header-nav">
                 <ul class="header-nav-list">
                     <li class="header-nav-item"><a href="#">Главная</a></li>
@@ -59,7 +49,6 @@
         </section>
     </header>
     
-
     <main>
         <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
         <section class="promo">
@@ -73,90 +62,98 @@
                         <h3>Перфораторы</h3>
                         <p>Настоящие мужские игрушки</p>
                         <img src="#" alt="Перфораторы" width="620" height="266">
+                        <a href="catalog.html" class="btn-red">Открыть каталог</a>
                       </li>
                       <!-- скрытый слайд -->
                       <li class="promo-sliders-item">
                         <h3>Дрели</h3>
                         <p>Соседям на радость!</p>
                         <img src="#" alt="Дрели" width="620" height="266">
+                        <a href="catalog.html" class="btn-red">Открыть каталог</a>
                       </li>
                     </ul>
-                    <a href="catalog.html" class="btn-red">Открыть каталог</a>
                     <button type="button">Влево</button>
                     <button type="button">Вправо</button>
                 </li>
                 <!-- остальные элементы списка -->
-                <li class="promo-item promo-item-new">
+                <li class="promo-item promo-item-materials promo-item-new">
                   <!-- значок new добавить средствами CSS -->
                     <h3>Материалы</h3>
                     <a href="blank.html">на любой вкус</a>
                 </li>
 
-                <li class="promo-item">
+                <li class="promo-item promo-item-tools">
                     <h3>Инструменты</h3>
                     <a href="blank.html">на все случаи</a>
                 </li>
 
-                <li class="promo-item">
+                <li class="promo-item promo-item-technics">
                     <h3>Техника</h3>
                     <a href="blank.html">для стройки</a>
                 </li>
 
-                <li class="promo-item">
+                <li class="promo-item promo-item-discounts">
                     <h3>Скидки 50%</h3>
                     <a href="blank.html">на 350 товаров</a>
                 </li>
 
-                <li class="promo-item">
+                <li class="promo-item promo-item-delivery">
                     <h3>Доставка</h3>
                     <a href="blank.html">бесплатно</a>
                 </li>
-
             </ul>
-
         </section>
 
         <section class="popular-goods">
             <h2>Популярные товары:</h2>
             <a href="blank.html" class="btn-red">Все популярные товары</a>
 
-            <ul class="popular-goods-list">
-                <li class="popular-goods-item">
-                    <h3>Перфоратор BOSCH BFG 9000</h3>
+            <ul class="popular-goods-list goods-list">
+
+                <li class="good-item">
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 9000</a></h3>
+                    <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="#" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
-                    <p class="popular-goods-old-price">32500 р.</p>
-                    <!-- Новая цена это ссылка? кнопка для добавления в корзину? -->
-                    <p class="popular-goods-new-price">25500 р.</p>
+                    <button type="button" class="btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
+
+                    <p class="good-item-old-price"><del>32500 р.</del></p>
+                    <p class="good-item-new-price">25500 р.</p>
                 </li>
 
-                <li class="popular-goods-item popular-goods-item-new">
-                  <!-- значок new добавить средствами CSS -->
-                  <h3>Перфоратор BOSCH BFG 3000</h3>
-                  <img src="#" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
-                  <p class="popular-goods-old-price">22500 р.</p>
-                  <!-- Новая цена это ссылка? кнопка для добавления в корзину? -->
-                  <p class="popular-goods-new-price">15500 р.</p>
-              </li>
+                <li class="good-item">
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 3000</a></h3>
+                    <!-- при наведении img скрывается и появляются кнопки -->
+                    <img src="#" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
+                    <button type="button" class="btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
 
-              <li class="popular-goods-item">
-                <h3>Перфоратор BOSCH BFG 6000</h3>
-                <img src="#" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
-                <p class="popular-goods-old-price">30500 р.</p>
-                <!-- Новая цена это ссылка? кнопка для добавления в корзину? -->
-                <p class="popular-goods-new-price">25500 р.</p>
-            </li>
+                    <p class="good-item-old-price"><del>22500 р.</del></p>
+                    <p class="good-item-new-price">15500 р.</p>
+                </li>
 
-            <li class="popular-goods-item popular-goods-item-new">
-              <!-- значок new добавить средствами CSS -->
-              <h3>Перфоратор BOSCH BFG 2000</h3>
-              <img src="#" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
-              <p class="popular-goods-old-price">22500 р.</p>
-              <!-- Новая цена это ссылка? кнопка для добавления в корзину? -->
-              <p class="popular-goods-new-price">12500 р.</p>
-          </li>
+                <li class="good-item">
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 6000</a></h3>
+                    <!-- при наведении img скрывается и появляются кнопки -->
+                    <img src="#" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
+                    <button type="button" class="btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
 
+                    <p class="good-item-old-price"><del>30500 р.</del></p>
+                    <p class="good-item-new-price">25500 р.</p>
+                </li>
+
+                <li class="good-item">
+                    <h3><a href="blank.html">Перфоратор BOSCH BFG 2000</a></h3>
+                    <!-- при наведении img скрывается и появляются кнопки -->
+                    <img src="#" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
+                    <button type="button" class="btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
+
+                    <p class="good-item-old-price"><del>22500 р.</del></p>
+                    <p class="good-item-new-price">12500 р.</p>
+                </li>
             </ul>
-
         </section>
 
         <section class="brands">
@@ -189,7 +186,6 @@
                     <a href="blank.html"><img src="#" alt="Логотип Metabo" width="206" height="73"></a>
                 </li>
             </ul>
-
         </section>
 
         <section class="services">
@@ -198,38 +194,33 @@
 
             <ul class="services-nav">
                 <!-- выбранный пункт меню "Сервисы" имеет дополнительный класс services-nav-item-active-->
-                <li class="services-nav-item services-nav-item-active"><a href="blank.html">Доставка</a></li>
-                <li class="services-nav-item"><a href="blank.html">Гарантия</a></li>
-                <li class="services-nav-item"><a href="blank.html">Кредит</a></li>
+                <li class="services-nav-item services-nav-item-active"><button type="button">Доставка</button></li>
+                <li class="services-nav-item"><button type="button">Гарантия</button></li>
+                <li class="services-nav-item"><button type="button">Кредит</button></li>
             </ul>
 
             <ul class="services-list">
                 <!-- открытый слайд имеет дополнительный класс services-list-item-open-->
                 <li class="services-list-item services-list-item-open">
                   <h3>Доставка</h3>
-                  <img src="#" alt="Иконка доставки" width="468" height="261">
                   <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
                 </li>
                 <!-- скрытые слайды -->
                 <li class="services-list-item">
                   <h3>Гарантия</h3>
-                  <img src="#" alt="Иконка гарантии" width="389" height="283">
                   <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
                 </li>
 
                 <li class="services-list-item ">
                   <h3>Кредит</h3>
-                  <img src="#" alt="Иконка кредита" width="465" height="285">
                   <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
                   <a href="blank.html" class="btn-red">Отправить заявку</a>
                 </li>
             </ul>
-
         </section>
 
         <section class="about">
             <h2 class="visually-hidden">О компании</h2>
-
             <section class="about-company">
                 <h3>Компания "Техномарт"</h3>
                 <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
@@ -249,7 +240,6 @@
                 <a href="blank.html" class="btn-red">Заблудились? Напишите нам!</a>
 
             </section>
-
         </section>
     </main>
 
@@ -259,17 +249,20 @@
             <address>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br>+7 800 555-86-28</address>
             
             <nav class="main-footer-nav">
-                <!-- может сделать два разных списка?? или стилизовать потом четные и нечетные отдельно???  -->
-                <ul class="footer-nav-list">
+                <!-- два  списка навигации  -->
+                <ul class="footer-nav-list-top">
                     <li class="footer-nav-item"><a href="blank.html">Компания</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Материалы</a></li>
                     <li class="footer-nav-item"><a href="blank.html">Новости</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Техника</a></li>
                     <li class="footer-nav-item"><a href="catalog.html">Каталог</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Инструмент</a></li>
                     <li class="footer-nav-item"><a href="blank.html">Доставка</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Спецпредложения</a></li>
                     <li class="footer-nav-item"><a href="blank.html">Контакты</a></li>
+                </ul>
+
+                <ul class="footer-nav-list-bottom">
+                    <li class="footer-nav-item"><a href="blank.html">Материалы</a></li>
+                    <li class="footer-nav-item"><a href="blank.html">Техника</a></li>
+                    <li class="footer-nav-item"><a href="blank.html">Инструмент</a></li>
+                    <li class="footer-nav-item"><a href="blank.html">Спецпредложения</a></li>
                 </ul>
             </nav>
         </section>
