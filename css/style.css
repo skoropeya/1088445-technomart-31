@@ -53,8 +53,457 @@
   font-style: normal;
 }
 
+/* цветовая схема */
+:root {
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --basic-grey: #32425C;        /* фон footer-top, цвет заголовков */
+  --dark-grey: #293449;         /* фон header-top, footer-bottom   */
+  --basic-red: #EE3643;         /* красные кнопки, метки NEW */
+  --basic-green: #63A63E;       /* кнопки Купить, Оформить заказ */
+  --green-shadow: #367315;         /* тень зеленой кнопки */
+  --basic-background: #F1F5F7;    /* фон хедера, сервисов и т.д. */
+  --basic-title: #F9F5F0;       /* фон заголовков */
+
+  --sort-filters: #F7F3EC;     /* фон фильтров, кнопок сортровки */
+  --border-btn-white: #E5E5E5;  /* обводка белых кнопок в каталоге */
+  --dark-blue: #161D29;         /* фон пользовательского меню при наведении */
+  --basic-greylight: #C5C5C5;   /* пользовательское меню при клике */
+  --active-blue: #1D2739;       /* активный пункт меню в хедере */
+  --address-grey: #F3F7F9;        /* текст адреса в top-footer */
+  --light-grey: #F1F5F7;        /*  меню в top-footer */
+  --socials-btn: #212A3A;       /* фон для ссылки на соцсети */
+  --border-card: #EAEAEA;          /* граница карточки товара/брэнда */
+  --del-text: #A9A9A9;          /* текст старая цена */
+  --blue-grey: #405069;
+  --special-yellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+
+  --special-yellowlight: #FFD180;  /*  меню в top-footer */
+  --color-success: #5FBB2D;
+
+  /* --color-warning: #FFBF47; */
+  /* --color-error: #BA2732; */
+  /* --basic-grey: #3D546F; */
+}
+
 body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
 }
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.visually-hidden {
+/* скрыть всякое */
+}
+
+/* общие стили для кнопок */
+.btn {
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  border: none;
+  background-color: transparent;
+}
+
+.btn-red {
+  background-color: var(--basic-red);
+}
+
+.btn-transparent {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-buy {
+  background-color: var(--basic-green);
+  box-shadow: inset 0px -3px 0px var(--green-shadow);
+  border-radius: 2px;
+}
+
+.btn-mark {
+  background-color: var(--basic-white);
+  color: var(--basic-grey);
+  border: 3px solid var(--basic-green);
+  border-radius: 2px;
+}
+
+                                  /* не работает */
+/* .btn-white {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  border: 1px solid var(--border-btn-white);
+  border-radius: 2px;
+} */
+
+/* HEADER */
+.main-header-top {
+  font-size: 18px;
+  background-color: var(--dark-grey);
+  color: var(--basic-white);
+}
+.users-menu {
+  list-style: none;
+}
+
+.users-menu .users-menu-link {
+  color: inherit;
+}
+.users-menu-order {
+  background-color: var(--basic-green);
+  text-align: center;
+}
+
+.users-menu-marks:hover,
+.users-menu-marks:focus,
+.users-menu-basket:hover,
+.users-menu-basket:focus {
+  /* меняется цвет иконки при наведении*/
+}
+
+.users-menu-marks:active,
+.users-menu-basket:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--dark-blue);
+}
+.users-menu-order:hover,
+.users-menu-order:focus {
+  background-color: var(--color-success);
+}
+.users-menu-order:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--basic-green);
+}
+.header-search-message {
+  border: none;
+  color: var(--basic-white);
+  background-color: transparent;
+}
+
+.header-search-message:hover {
+  /* меняктся цвет иконки */
+}
+.header-search-message:focus {
+  /* и еще смена цвета иконки */
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  border: none;
+}
+
+
+.main-header-bottom {
+  background-color: var(--basic-background);
+}
+.main-header-description {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: left;
+  color: var(--basic-red);
+}
+.main-header-phone {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+  border: 3px solid var(--basic-white);
+}
+
+.main-header-address {
+  font-style: normal;
+  color: var(--basic-grey);
+}
+
+.btn-user {
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+.btn-user:hover,
+.btn-user:focus {
+  color: var(--basic-red);
+  /* смена цвета иконки */
+}
+.btn-user:active {
+  color: var(--basic-greylight);
+
+}
+
+.header-nav-list {
+  list-style: none;
+  background: var(--basic-grey);
+  box-shadow: inset 0px -5px 0px var(--dark-grey);
+
+}
+.header-nav-item a{
+  color: var(--basic-white);
+}
+.header-nav-item a:hover,
+.header-nav-item a:focus {
+  background-color: var(--dark-grey);
+}
+.header-nav-item a:active {
+  opacity: 0.5;
+  background-color: var(--active-blue);
+}
+
+/* FOOTER */
+
+.main-footer-top {
+  background-color: var(--basic-grey);
+  font-size: 18px;
+}
+.main-footer-address {
+  font-style: normal;
+  color: var(--address-grey);
+}
+.footer-nav-list-top,
+.footer-nav-list-bottom {
+  list-style: none;
+}
+.footer-nav-list-top a {
+  color: var(--light-grey);
+}
+
+.footer-nav-list-bottom a{
+  color: #FFD180;
+}
+.footer-nav-list-top a:hover,
+.footer-nav-list-top a:focus,
+.footer-nav-list-bottom a:hover,
+.footer-nav-list-bottom a:focus {
+  text-decoration: underline;
+}
+.footer-nav-list-top a:active,
+.footer-nav-list-bottom a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+.main-footer-bottom {
+  background-color: var(--dark-grey);
+  color: var(--basic-white);
+  font-size: 16px;
+  line-height: 18px;
+}
+.footer-socials-list {
+  list-style: none;
+}
+.socials-item a{
+  background-color: var(--socials-btn);
+  color: var(--basic-white);
+}
+.socials-item a:hover,
+.socials-item a:focus,
+.socials-item a:active {
+  background-color: var(--basic-red);
+}
+
+.main-footer-feedback a,
+.main-footer-developed a{
+  color: var(--special-yellowlight);
+}
+.main-footer-feedback a:hover,
+.main-footer-feedback a:focus,
+.main-footer-developed a:hover,
+.main-footer-developed a:focus {
+  text-decoration: underline;
+}
+.main-footer-feedback a:active,
+.main-footer-developed a:active{
+  text-decoration: none;
+  color: var(--basic-red);
+}
+
+
+/* section PROMO */
+.promo {
+  color: var(--basic-white);
+}
+.promo-list,
+.promo-sliders-list {
+  list-style: none;
+}
+.promo-slider-wrapper {
+  background-color: var(--basic-black);
+  opacity: 0.25;
+}
+.promo-sliders-item h3 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.promo-sliders-item p {
+  font-size: 18px;
+}
+.promo-item h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+.promo-item-materials {
+  background-color: var(--special-yellow);
+}
+.promo-item-tools {
+  background-color: var(--special-blue);
+}
+.promo-item-technics {
+  background-color: var(--special-lilac);
+}
+.promo-item-discounts {
+  background-color: var(--special-greenlight);
+}
+.promo-item-delivery {
+  background-color: var(--special-yellow);
+}
+
+/* section POPULAR-GOODS */
+
+.popular-goods-wrapper {
+  background-color: var(--basic-title);
+}
+.popular-goods h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--basic-grey);
+}
+.goods-list {
+  list-style: none;
+}
+.good-item {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--basic-black);
+  border: 1px solid var(--border-card);
+}
+.good-item h3 a {
+  color: inherit;
+}
+.good-item .good-item-old-price {
+  font-size: 17px;
+  line-height: 18px;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+  color: var(--del-text);
+}
+.good-item .good-item-new-price {
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  /* уголок-стрелочка???? */
+}
+
+/* section BRANDS */
+
+.brands-wrapper {
+  background-color: var(--basic-title);
+}
+.brands h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--basic-grey);
+}
+.brands-list {
+  list-style: none;
+}
+.brands-item {
+  text-align: center;
+  border: 1px solid var(--border-card);
+}
+
+/* section SERVICES */
+
+.services {
+  background-color: var(--basic-background);
+}
+
+.services h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.services-description {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  color: var(--basic-black);
+}
+.services-nav,
+.services-list {
+  list-style: none;
+}
+.services-nav-item .btn-services {
+  border: none;
+  background-color: var(--basic-grey);
+  box-shadow:
+  0px 1px 0px var(--dark-grey),
+  inset 0px 1px 0px var(--blue-grey);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+.services-nav-item .btn-services:hover,
+.services-nav-item .btn-services:focus {
+  background-color: var(--dark-grey);
+}
+
+.services-nav-item-active .btn-services-active {
+  background-color: var(--basic-white);
+  color: var(--basic-grey);
+  box-shadow:
+  0px 1px 0px var(--basic-white),
+  inset 0px 1px 0px var(--basic-white);
+}
+.services-nav-item-active .btn-services-active:hover,
+.services-nav-item-active .btn-services-active:focus {
+  background-color: var(--basic-white);
+}
+
+.services-list-item h3 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--basic-grey);
+}
+.services-list-item p {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  color: var(--basic-black);
+}
+
+/* section ABOUT */
+

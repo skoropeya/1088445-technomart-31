@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,36 +11,50 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="page-body">
 
     <header class="main-header">
 
-        <section class="main-header-top">
-            <a href="index.html"><img src="img/logo-header.svg" alt="Логотип Техномарт" width="220" height="47"></a>
-            <form action="https://echo.htmlacademy.ru" method="POST" class="header-form-search">
-                <label for="header-search-message" class="visually-hidden">Поиск</label>
-                <input type="text" name="search-message" id="header-search-message" placeholder="Поиск:">
-            </form>
-            <ul class="users-menu">
-                <li><a href="blank.html" class="users-menu-link users-menu-marks">Закладки: <span class="count-marks">0</span></a></li>
-                <li><a href="blank.html" class="users-menu-link users-menu-basket">Корзина: <span class="count-goods">0</span></a></li>
-                <li><a href="blank.html" class="users-menu-link users-menu-order">Оформить заказ</a></li>
-            </ul>
-        </section>
+      <section class="main-header-top">
+        <a class="main-header-logo"><img src="img/logo-header.svg" alt="Логотип Техномарт" width="220" height="47"></a>
+        <form action="https://echo.htmlacademy.ru" method="POST" class="header-form-search">
+            <label for="header-search-message">
+              <span class="visually-hidden">Поиск</span>
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+              </svg>
+            </label>
+            <input type="search" name="search-message" id="header-search-message" class="header-search-message" placeholder="Поиск:">
+        </form>
+        <ul class="users-menu">
+            <li><a href="blank.html" class="users-menu-link users-menu-marks">Закладки: <span class="count-marks">0</span></a></li>
+            <li><a href="blank.html" class="users-menu-link users-menu-basket">Корзина: <span class="count-goods">0</span></a></li>
+            <li><a href="blank.html" class="users-menu-link users-menu-order">Оформить заказ</a></li>
+        </ul>
+      </section>
 
         <section class="main-header-bottom">
-            <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
+            <p class="main-header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
 
-            <div>
-              <a href="tel:+78005558628">+7 800 555-86-28</a>
-              <address>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</address>
+            <div class="main-header-contact">
+              <a href="tel:+78005558628" class="main-header-phone">+7 800 555-86-28</a>
+              <address class="main-header-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</address>
             </div>
 
             <!-- пользователь авторизован -->
-            <div class="main-header-bottom-user main-header-bottom-user-authorization">
-                <a href="blank.html" class="user-profile">Равшан Джамшутович</a>
+            <div class="main-header-user main-header-user-authorization">
+                <a href="blank.html" class="user-profile">
+                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.881 14.166C15.737 13.431 13.625 12.5 12.674 11.776C12.017 11.275 11.904 10.158 12.157 9.361C13.275 8.458 14.021 6.884 14.021 5.083C14.021 2.276 12.221 0 10 0C7.77902 0 5.97901 2.276 5.97901 5.083C5.97901 6.884 6.72501 8.457 7.84201 9.36C8.09501 10.158 7.98302 11.275 7.32502 11.776C6.37502 12.5 4.26201 13.43 2.11801 14.166C-0.0259852 14.902 1.48343e-05 18 1.48343e-05 18H20C20 18 20.025 14.901 17.881 14.166Z" fill="#C5C5C5"/>
+                  </svg>
+                  <span>Равшан Джамшутович</span>
+                  <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
+                    <path d="M2.10598 13.952V3.048C2.12398 2.672 2.27698 1.991 3.11598 1.991H8.14297V0H3.11598C0.937975 0 0.111975 1.81 0.0869751 3.027V13.973C0.111975 15.189 0.937975 17 3.11598 17H8.14297V15.01H3.11598C2.27698 15.01 2.12398 14.327 2.10598 13.952Z" fill="#C5C5C5"/>
+                  </svg>
+                </a>
                 <a href="blank.html" class="user-exit">Выход</a>
-                <ul>
+                <ul class="header-user-links">
                     <li><a href="blank.html" class="user-link user-link-orders">Мои заказы</a></li>
                     <li><a href="blank.html" class="user-link user-link-cabinet">Личный кабинет</a></li>
                 </ul>
@@ -48,9 +62,9 @@
 
             <nav class="main-header-nav">
                 <ul class="header-nav-list">
-                    <li class="header-nav-item"><a href="#">Главная</a></li>
+                    <li class="header-nav-item"><a href="index.html">Главная</a></li>
                     <li class="header-nav-item"><a href="blank.html">Компания</a></li>
-                    <li class="header-nav-item"><a href="catalog.html">Каталог</a></li>
+                    <li class="header-nav-item"><a href="#">Каталог</a></li>
                     <li class="header-nav-item"><a href="blank.html">Новости</a></li>
                     <li class="header-nav-item"><a href="blank.html">Спецпредложения</a></li>
                     <li class="header-nav-item"><a href="blank.html">Доставка</a></li>
@@ -61,7 +75,7 @@
     </header>
 
 
-    <main>
+    <main class="page-catalog container">
         <h1>Перфораторы</h1>
         <ul class="bread-crumbs">
             <li class="bread-crumbs-item"><a href="index.html">Домашняя страница</a></li>
@@ -133,7 +147,7 @@
                     </ul>
 
                 </fieldset>
-                <button type="submit">Показать</button>
+                <button type="submit" class="btn-white btn-show">Показать</button>
 
             </form>
 
@@ -144,12 +158,11 @@
             <h2 class="visually-hidden">Список товаров</h2>
             <p class="main-goods-catalog-sort">
                 <span>Сортировка:</span>
-                <!-- это кнопки или ссылки? -->
-                <a href="#">По цене</a>
-                <a href="#">По типу</a>
-                <a href="#">По функционалу</a>
-                <a href="#">По возрастанию</a>
-                <a href="#">По убыванию</a>
+                <a href="#" class="sorting-attribute">По цене</a>
+                <a href="#" class="sorting-attribute">По типу</a>
+                <a href="#" class="sorting-attribute">По функционалу</a>
+                <a href="#" class="sorting-attribute sorting-attribute-img">По возрастанию</a>
+                <a href="#" class="sorting-attribute sorting-attribute-img">По убыванию</a>
             </p>
 
             <ul class="goods-list">
@@ -157,8 +170,8 @@
                     <h3><a href="blank.html">Перфоратор BOSCH BFG 6000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="img/goods/bosch-bfg-6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
-                    <button type="button" class="btn-buy visually-hidden">Купить</button>
-                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
+                    <button type="button" class="btn btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn btn-mark visually-hidden">В закладки</button>
 
                     <p class="good-item-old-price"><del>30500 р.</del></p>
                     <p class="good-item-new-price">25500 р.</p>
@@ -168,8 +181,8 @@
                     <h3><a href="blank.html">Перфоратор BOSCH BFG 6000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="img/goods/bosch-bfg-6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
-                    <button type="button" class="btn-buy visually-hidden">Купить</button>
-                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
+                    <button type="button" class="btn btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn btn-mark visually-hidden">В закладки</button>
 
                     <p class="good-item-old-price"><del>30500 р.</del></p>
                     <p class="good-item-new-price">25500 р.</p>
@@ -180,8 +193,8 @@
                     <h3><a href="blank.html">Перфоратор BOSCH BFG 6000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="img/goods/bosch-bfg-6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
-                    <button type="button" class="btn-buy visually-hidden">Купить</button>
-                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
+                    <button type="button" class="btn btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn btn-mark visually-hidden">В закладки</button>
 
                     <p class="good-item-old-price"><del>30500 р.</del></p>
                     <p class="good-item-new-price">25500 р.</p>
@@ -192,8 +205,8 @@
                     <h3><a href="blank.html">Перфоратор BOSCH BFG 3000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="img/goods/bosch-bfg-3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
-                    <button type="button" class="btn-buy visually-hidden">Купить</button>
-                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
+                    <button type="button" class="btn btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn btn-mark visually-hidden">В закладки</button>
 
                     <p class="good-item-old-price"><del>22500 р.</del></p>
                     <p class="good-item-new-price">15500 р.</p>
@@ -203,8 +216,8 @@
                     <h3><a href="blank.html">Перфоратор BOSCH BFG 6000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="img/goods/bosch-bfg-6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
-                    <button type="button" class="btn-buy visually-hidden">Купить</button>
-                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
+                    <button type="button" class="btn btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn btn-mark visually-hidden">В закладки</button>
 
                     <p class="good-item-old-price"><del>30500 р.</del></p>
                     <p class="good-item-new-price">25500 р.</p>
@@ -215,8 +228,8 @@
                     <h3><a href="blank.html">Перфоратор BOSCH BFG 2000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="img/goods/bosch-bfg-2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
-                    <button type="button" class="btn-buy visually-hidden">Купить</button>
-                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
+                    <button type="button" class="btn btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn btn-mark visually-hidden">В закладки</button>
 
                     <p class="good-item-old-price"><del></del></p>
                     <p class="good-item-new-price">25500 р.</p>
@@ -227,8 +240,8 @@
                     <h3><a href="blank.html">Перфоратор BOSCH BFG 3000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="img/goods/bosch-bfg-3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
-                    <button type="button" class="btn-buy visually-hidden">Купить</button>
-                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
+                    <button type="button" class="btn btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn btn-mark visually-hidden">В закладки</button>
 
                     <p class="good-item-old-price"><del>22500 р.</del></p>
                     <p class="good-item-new-price">15500 р.</p>
@@ -238,8 +251,8 @@
                     <h3><a href="blank.html">Перфоратор BOSCH BFG 6000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="img/goods/bosch-bfg-6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
-                    <button type="button" class="btn-buy visually-hidden">Купить</button>
-                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
+                    <button type="button" class="btn btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn btn-mark visually-hidden">В закладки</button>
 
                     <p class="good-item-old-price"><del>30500 р.</del></p>
                     <p class="good-item-new-price">25500 р.</p>
@@ -250,29 +263,29 @@
                     <h3><a href="blank.html">Перфоратор BOSCH BFG 2000</a></h3>
                     <!-- при наведении img скрывается и появляются кнопки -->
                     <img src="img/goods/bosch-bfg-2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
-                    <button type="button" class="btn-buy visually-hidden">Купить</button>
-                    <button type="button" class="btn-mark visually-hidden">В закладки</button>
+                    <button type="button" class="btn btn-buy visually-hidden">Купить</button>
+                    <button type="button" class="btn btn-mark visually-hidden">В закладки</button>
 
                     <p class="good-item-old-price"><del></del></p>
                     <p class="good-item-new-price">25500 р.</p>
                 </li>
             </ul>
 
-            <ul class="main-goods-catalog-pages">
-                <li class="catalog-page-item">
+            <ul class="pagination-list">
+                <li class="pagination-item pagination-item-current">
                     <a>1</a>
                 </li>
 
-                <li class="catalog-page-item">
+                <li class="pagination-item">
                     <a href="blank.html">2</a>
                 </li>
 
-                <li class="catalog-page-item">
+                <li class="pagination-item">
                     <a href="blank.html">3</a>
                 </li>
 
-                <li class="catalog-page-item">
-                    <a href="blank.html">Следующая</a>
+                <li class="pagination-item">
+                    <a href="blank.html" class="btn-white">Следующая</a>
                 </li>
             </ul>
 
@@ -288,50 +301,50 @@
         </section>
 
         <!-- всплывающее окно "Товар добавлен в корзину" по умолчанию скрыто -->
-        <section class="good-in-basket visually-hidden">
+        <section class="modal modal-in-basket visually-hidden">
             <h2>Товар добавлен в корзину!</h2>
-            <button type="button" class="btn-close">Закрыть</button>
-            <button type="button" class="make-order">Оформить заказ</button>
-            <button type="button" class="more-shopping">Продолжить покупки</button>
+            <button type="button" class="close-modal">Закрыть</button>
+            <button type="button" class="btn btn-red btn-make-order">Оформить заказ</button>
+            <button type="button" class="btn btn-more-shopping">Продолжить покупки</button>
         </section>
     </main>
 
     <footer class="main-footer">
-        <section class="main-footer-top">
-            <a href="index.html"><img src="img/logo-footer.svg" alt="Логотип Техномарт" width="220" height="68"></a>
-            <address>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br>+7 800 555-86-28</address>
+      <section class="main-footer-top">
+          <a class="main-footer-logo"><img src="img/logo-footer.svg" alt="Логотип Техномарт" width="220" height="68"></a>
+          <address class="main-footer-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br>+7 800 555-86-28</address>
 
-            <nav class="main-footer-nav">
-                <!-- два  списка навигации  -->
-                <ul class="footer-nav-list-top">
-                    <li class="footer-nav-item"><a href="blank.html">Компания</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Новости</a></li>
-                    <li class="footer-nav-item"><a href="catalog.html">Каталог</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Доставка</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Контакты</a></li>
-                </ul>
+          <nav class="main-footer-nav">
+              <!-- два  списка навигации  -->
+              <ul class="footer-nav-list-top">
+                  <li class="footer-nav-item"><a href="blank.html">Компания</a></li>
+                  <li class="footer-nav-item"><a href="blank.html">Новости</a></li>
+                  <li class="footer-nav-item"><a href="#">Каталог</a></li>
+                  <li class="footer-nav-item"><a href="blank.html">Доставка</a></li>
+                  <li class="footer-nav-item"><a href="blank.html">Контакты</a></li>
+              </ul>
 
-                <ul class="footer-nav-list-bottom">
-                    <li class="footer-nav-item"><a href="blank.html">Материалы</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Техника</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Инструмент</a></li>
-                    <li class="footer-nav-item"><a href="blank.html">Спецпредложения</a></li>
-                </ul>
-            </nav>
-        </section>
+              <ul class="footer-nav-list-bottom">
+                  <li class="footer-nav-item"><a href="blank.html">Материалы</a></li>
+                  <li class="footer-nav-item"><a href="blank.html">Техника</a></li>
+                  <li class="footer-nav-item"><a href="blank.html">Инструмент</a></li>
+                  <li class="footer-nav-item"><a href="blank.html">Спецпредложения</a></li>
+              </ul>
+          </nav>
+      </section>
 
-        <section class="main-footer-bottom">
-            <p>© 2010–2021 Компания «Техномарт»<br>Все права защищены</p>
+      <section class="main-footer-bottom">
+          <p class="main-footer-copy">© 2010–2021 Компания «Техномарт»<br>Все права защищены</p>
 
-            <ul class="main-footer-sn-list">
-                <li class="sn-item sn-vk"><a href="blank.html">Вконтакте</a></li>
-                <li class="sn-item sn-fb"><a href="blank.html">Facebook</a></li>
-                <li class="sn-item sn-inst"><a href="blank.html">Instagram</a></li>
-            </ul>
+          <ul class="footer-socials-list">
+              <li class="socials-item socials-vk"><a href="blank.html">Вконтакте</a></li>
+              <li class="socials-item socials-fb"><a href="blank.html">Facebook</a></li>
+              <li class="socials-item socials-inst"><a href="blank.html">Instagram</a></li>
+          </ul>
 
-            <p>Обратная связь:<br><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-            <p>Разработано —<br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
-        </section>
+          <p class="main-footer-feedback">Обратная связь:<br><a class="footer-feedback-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+          <p class="main-footer-developed">Разработано —<br><a class="footer-developed-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
+      </section>
     </footer>
   </body>
 </html>
