@@ -60,11 +60,14 @@
   --basic-grey: #32425C;        /* фон footer-top, цвет заголовков */
   --dark-grey: #293449;         /* фон header-top, footer-bottom   */
   --basic-red: #EE3643;         /* красные кнопки, метки NEW */
+  --red-hover: #CA2C37;
+  --red-active: #BA2732;
   --basic-green: #63A63E;       /* кнопки Купить, Оформить заказ */
   --green-shadow: #367315;         /* тень зеленой кнопки */
+  --green-hover: #5FBB2D;
+  --green-active: #518534;
   --basic-background: #F1F5F7;    /* фон хедера, сервисов и т.д. */
   --basic-title: #F9F5F0;       /* фон заголовков */
-
   --sort-filters: #F7F3EC;     /* фон фильтров, кнопок сортровки */
   --border-btn-white: #E5E5E5;  /* обводка белых кнопок в каталоге */
   --dark-blue: #161D29;         /* фон пользовательского меню при наведении */
@@ -74,19 +77,17 @@
   --light-grey: #F1F5F7;        /*  меню в top-footer */
   --socials-btn: #212A3A;       /* фон для ссылки на соцсети */
   --border-card: #EAEAEA;          /* граница карточки товара/брэнда */
-  --del-text: #A9A9A9;          /* текст старая цена */
+  --del-text: #A9A9A9;          /* текст старая цена, форма обратной связи */
+  --another-grey: #F4F4F4;
   --blue-grey: #405069;
+  --more-grey: #3D546F;
   --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
   --special-lilac: #DC91D8;
   --special-greenlight: #8ED78F;
-
   --special-yellowlight: #FFD180;  /*  меню в top-footer */
-  --color-success: #5FBB2D;
 
-  /* --color-warning: #FFBF47; */
-  /* --color-error: #BA2732; */
-  /* --basic-grey: #3D546F; */
+
 }
 
 body {
@@ -110,11 +111,17 @@ img {
   max-width: 100%;
   height: auto;
 }
-.visually-hidden {
 /* скрыть всякое */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 /* общие стили для кнопок */
+
 .btn {
   line-height: 18px;
   text-align: center;
@@ -127,15 +134,36 @@ img {
 .btn-red {
   background-color: var(--basic-red);
 }
+.btn-red:hover,
+.btn-red:focus {
+  background-color: var(--red-hover);
+}
+.btn-red:active {
+  background-color: var(--red-active);
+}
 
 .btn-transparent {
   background-color: rgba(255, 255, 255, 0.3);
+}
+.btn-transparent:hover,
+.btn-transparent:focus {
+  background-color: rgba(197, 197, 197, 0.3);
+}
+.btn-transparent:active {
+  background-color: rgba(169, 169, 169, 0.3);
 }
 
 .btn-buy {
   background-color: var(--basic-green);
   box-shadow: inset 0px -3px 0px var(--green-shadow);
   border-radius: 2px;
+}
+.btn-buy:hover,
+.btn-buy:focus {
+  background-color: var(--green-hover);
+}
+.btn-buy:active {
+  background-color: var(--green-active);
 }
 
 .btn-mark {
@@ -144,20 +172,24 @@ img {
   border: 3px solid var(--basic-green);
   border-radius: 2px;
 }
-
-                                  /* не работает */
-/* .btn-white {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  text-align: center;
-  color: var(--basic-black);
-  background-color: var(--basic-white);
-  border: 1px solid var(--border-btn-white);
-  border-radius: 2px;
-} */
+.btn-mark:hover,
+.btn-mark:focus {
+  border: 3px solid var(--basic-grey);
+}
+.btn-mark:active {
+  border: 3px solid var(--basic-grey);
+  opacity: 0.5;
+}
+.close-modal {
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon/icon-close.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
 /* HEADER */
+
 .main-header-top {
   font-size: 18px;
   background-color: var(--dark-grey);
@@ -166,7 +198,6 @@ img {
 .users-menu {
   list-style: none;
 }
-
 .users-menu .users-menu-link {
   color: inherit;
 }
@@ -174,44 +205,74 @@ img {
   background-color: var(--basic-green);
   text-align: center;
 }
-
-.users-menu-marks:hover,
-.users-menu-marks:focus,
-.users-menu-basket:hover,
-.users-menu-basket:focus {
-  /* меняется цвет иконки при наведении*/
-}
-
 .users-menu-marks:active,
 .users-menu-basket:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: var(--dark-blue);
 }
+.users-menu-link-notempty {
+  background-color: var(--basic-red);
+}
+.users-menu-link-notempty:active {
+  background-color: var(--basic-red);
+}
+
+.users-menu-marks,
+.users-menu-basket {
+  padding-left: 20px;
+}
+.users-menu-marks{
+  background-image: url("../img/icon/icon-bookmark.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.users-menu-basket {
+  background-image: url("../img/icon/icon-basket.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
 .users-menu-order:hover,
 .users-menu-order:focus {
-  background-color: var(--color-success);
+  background-color: var(--green-hover);
 }
 .users-menu-order:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: var(--basic-green);
 }
-.header-search-message {
+.header-form-search {
+  position: relative;
+}
+.header-form-search .input-search-message {
   border: none;
   color: var(--basic-white);
   background-color: transparent;
+  margin-left: 20px;
 }
-
-.header-search-message:hover {
-  /* меняктся цвет иконки */
+.header-form-search .input-search-message::placeholder {
+  color: var(--basic-white);
+  opacity: 1;;
 }
-.header-search-message:focus {
-  /* и еще смена цвета иконки */
+.header-form-search .svg-icon-search {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.header-form-search .svg-icon-search path{
+  fill: var(--basic-white);
+  fill-opacity: 0.3;
+}
+.header-form-search:hover .svg-icon-search path{
+  fill-opacity: 1;
+}
+.header-form-search .input-search-message:focus {
   background-color: var(--basic-white);
   color: var(--basic-black);
-  border: none;
+  outline: none;
 }
-
-
+.header-form-search .input-search-message:focus + .svg-icon-search path{
+  fill: var(--basic-red);
+  fill-opacity: 1;
+}
 .main-header-bottom {
   background-color: var(--basic-background);
 }
@@ -228,6 +289,10 @@ img {
   line-height: 30px;
   color: var(--basic-red);
   border: 3px solid var(--basic-white);
+  background-image: url("../img/icon/icon-phone.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 20px;
 }
 
 .main-header-address {
@@ -245,11 +310,16 @@ img {
 .btn-user:hover,
 .btn-user:focus {
   color: var(--basic-red);
-  /* смена цвета иконки */
 }
 .btn-user:active {
   color: var(--basic-greylight);
-
+}
+.btn-enter .svg-icon-login path{
+  fill: var(--basic-greylight);
+}
+.btn-enter:hover .svg-icon-login path,
+.btn-enter:focus .svg-icon-login path {
+  fill: var(--more-grey);
 }
 
 .header-nav-list {
@@ -289,7 +359,7 @@ img {
 }
 
 .footer-nav-list-bottom a{
-  color: #FFD180;
+  color: var(--special-yellowlight);
 }
 .footer-nav-list-top a:hover,
 .footer-nav-list-top a:focus,
@@ -315,12 +385,26 @@ img {
   background-color: var(--socials-btn);
   color: var(--basic-white);
 }
+.socials-vk a {
+  background-image: url("../img/socials/icon-vk.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.socials-fb a {
+  background-image: url("../img/socials/icon-fb.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.socials-inst a {
+  background-image: url("../img/socials/icon-insta.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 .socials-item a:hover,
 .socials-item a:focus,
 .socials-item a:active {
   background-color: var(--basic-red);
 }
-
 .main-footer-feedback a,
 .main-footer-developed a{
   color: var(--special-yellowlight);
@@ -337,8 +421,8 @@ img {
   color: var(--basic-red);
 }
 
-
 /* section PROMO */
+
 .promo {
   color: var(--basic-white);
 }
@@ -364,20 +448,54 @@ img {
   font-size: 24px;
   line-height: 30px;
 }
+.promo-item {
+  position: relative;
+}
 .promo-item-materials {
   background-color: var(--special-yellow);
+  background-image: url("../img/icon/promo-materials.svg");
+  /* подобрать значение background-position */
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 .promo-item-tools {
   background-color: var(--special-blue);
+  background-image: url("../img/icon/promo-tools.svg");
+  /* подобрать значение background-position */
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 .promo-item-technics {
   background-color: var(--special-lilac);
+  background-image: url("../img/icon/promo-technics.svg");
+  /* подобрать значение background-position */
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 .promo-item-discounts {
   background-color: var(--special-greenlight);
+  background-image: url("../img/icon/promo-discounts.svg");
+  /* подобрать значение background-position */
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 .promo-item-delivery {
   background-color: var(--special-yellow);
+  background-image: url("../img/icon/promo-delivery.svg");
+  /* подобрать значение background-position */
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+/* красная метка с надписью NEW */
+.promo-item-new::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 60px;
+  height: 59px;
+  background-image: url("../img/promo-new.png");
+  background-repeat: no-repeat;
 }
 
 /* section POPULAR-GOODS */
@@ -396,6 +514,7 @@ img {
   list-style: none;
 }
 .good-item {
+  position: relative;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -403,6 +522,9 @@ img {
   text-align: center;
   color: var(--basic-black);
   border: 1px solid var(--border-card);
+}
+.good-item:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 .good-item h3 a {
   color: inherit;
@@ -421,6 +543,17 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-red);
   /* уголок-стрелочка???? */
+}
+/* красная метка с надписью NEW */
+.good-item-new::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 60px;
+  height: 59px;
+  background-image: url("../img/promo-new.png");
+  background-repeat: no-repeat;
 }
 
 /* section BRANDS */
@@ -442,13 +575,20 @@ img {
   text-align: center;
   border: 1px solid var(--border-card);
 }
+.brands-item:hover,
+.brands-item:focus {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+.brands-item:active {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0.5;
+}
 
 /* section SERVICES */
 
 .services {
   background-color: var(--basic-background);
 }
-
 .services h2 {
   font-size: 30px;
   line-height: 30px;
@@ -504,6 +644,75 @@ img {
   font-size: 13px;
   color: var(--basic-black);
 }
+.services-list-item-delivery {
+  background-color: var(--basic-background);
+  background-image: url("../img/services-delivery.png");
+  /* подобрать значение background-position */
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.services-list-item-guarantee {
+  background-color: var(--basic-background);
+  background-image: url("../img/services-guarantee.png");
+  /* подобрать значение background-position */
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.services-list-item-credit {
+  background-color: var(--basic-background);
+  background-image: url("../img/services-credit.png");
+  /* подобрать значение background-position */
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
 /* section ABOUT */
 
+.about h3 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.about p {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  color: var(--basic-black);
+}
+.transport-companies {
+  list-style: none;
+}
+.transport-companies li {
+  font-size: 18px;
+  color: var(--basic-black);
+}
+
+/* section MODAL MODAL-FEEDBACK */
+.modal-feedback label {
+  font-size: 18px;
+  color: var(--basic-black);
+}
+
+input.feedback-name,
+input.feedback-email,
+textarea.feedback-message {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  color: var(--del-text);
+  background: var(--basic-white);
+  border: 2px solid var(--basic-greylight);
+  border-radius: 2px;
+}
+
+input.feedback-name:focus,
+input.feedback-email:focus,
+textarea.feedback-message:focus {
+  border: 2px solid var(--basic-greylight);
+  outline: none;
+}
+.submit-wrapper {
+  background-color: var(--another-grey);
+}

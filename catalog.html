@@ -18,17 +18,15 @@
       <section class="main-header-top">
         <a class="main-header-logo"><img src="img/logo-header.svg" alt="Логотип Техномарт" width="220" height="47"></a>
         <form action="https://echo.htmlacademy.ru" method="POST" class="header-form-search">
-            <label for="header-search-message">
-              <span class="visually-hidden">Поиск</span>
-              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
-              </svg>
-            </label>
-            <input type="search" name="search-message" id="header-search-message" class="header-search-message" placeholder="Поиск:">
+          <label for="search-message" class="label-search-message visually-hidden">Поиск</label>
+          <input type="search" name="search-message" id="search-message" class="input-search-message" placeholder="Поиск:">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-icon-search">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+          </svg>
         </form>
         <ul class="users-menu">
             <li><a href="blank.html" class="users-menu-link users-menu-marks">Закладки: <span class="count-marks">0</span></a></li>
-            <li><a href="blank.html" class="users-menu-link users-menu-basket">Корзина: <span class="count-goods">0</span></a></li>
+            <li><a href="blank.html" class="users-menu-link users-menu-basket users-menu-link-notempty">Корзина: <span class="count-goods">10</span></a></li>
             <li><a href="blank.html" class="users-menu-link users-menu-order">Оформить заказ</a></li>
         </ul>
       </section>
@@ -301,7 +299,7 @@
         </section>
 
         <!-- всплывающее окно "Товар добавлен в корзину" по умолчанию скрыто -->
-        <section class="modal modal-in-basket visually-hidden">
+        <section class="modal modal-in-basket">
             <h2>Товар добавлен в корзину!</h2>
             <button type="button" class="close-modal">Закрыть</button>
             <button type="button" class="btn btn-red btn-make-order">Оформить заказ</button>
