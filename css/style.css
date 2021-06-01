@@ -66,7 +66,7 @@
   --green-shadow: #367315;         /* тень зеленой кнопки */
   --green-hover: #5FBB2D;
   --green-active: #518534;
-  --basic-background: #F1F5F7;    /* фон хедера, сервисов и т.д. */
+  --basic-background: #F1F5F7;    /* фон хедера, top-footer, сервисов и т.д. */
   --basic-title: #F9F5F0;       /* фон заголовков */
   --sort-filters: #F7F3EC;     /* фон фильтров, кнопок сортровки */
   --border-btn-white: #E5E5E5;  /* обводка белых кнопок в каталоге */
@@ -74,7 +74,6 @@
   --basic-greylight: #C5C5C5;   /* пользовательское меню при клике */
   --active-blue: #1D2739;       /* активный пункт меню в хедере */
   --address-grey: #F3F7F9;        /* текст адреса в top-footer */
-  --light-grey: #F1F5F7;        /*  меню в top-footer */
   --socials-btn: #212A3A;       /* фон для ссылки на соцсети */
   --border-card: #EAEAEA;          /* граница карточки товара/брэнда */
   --del-text: #A9A9A9;          /* текст старая цена, форма обратной связи */
@@ -407,7 +406,7 @@ img {
   list-style: none;
 }
 .footer-nav-list-top a {
-  color: var(--light-grey);
+  color: var(--basic-background);
 }
 
 .footer-nav-list-bottom a{
@@ -767,4 +766,125 @@ textarea.feedback-message:focus {
 }
 .submit-wrapper {
   background-color: var(--another-grey);
+}
+
+/* CATALOG */
+
+.page-catalog h1{
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--basic-grey);
+  text-align: left;
+  background-color: var(--basic-background);
+}
+
+/* BREAD-CRUMBS */
+
+.bread-crumbs {
+  list-style: none;
+}
+.bread-crumbs-item {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.bread-crumbs-item a {
+  position: relative;
+  color: inherit;
+  /* паддинг добавляем. чтобы было видно стрелочки, потом скорректировать */
+  padding-right: 15px;
+}
+.bread-crumbs-home a {
+  display: block;
+  width: 14px;
+  height: 12px;
+  background-image: url("../img/icon/icon-home.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.bread-crumbs-item a::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 8px;
+  height: 14px;
+  background-image: url("../img/icon/icon-right-small.svg");
+  background-repeat: no-repeat;
+}
+.bread-crumbs-current a::after{
+  background: none;
+}
+
+/* section FILTERS */
+.filters-title {
+  background-color: var(--sort-filters);
+}
+.form-filters fieldset {
+  border: none;
+}
+.filter-price legend,
+.filter-brand legend,
+.filter-power-supply legend {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+/* section MAIN-GOODS-CATALOG */
+/* div сортировки */
+.goods-catalog-sort {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  background-color: var(--sort-filters);
+}
+.sorting-attributes {
+  list-style: none;
+}
+.sorting-attributes a {
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--basic-red);
+  opacity: 0.3;
+}
+.sorting-attributes a:hover,
+.sorting-attributes a:focus {
+  opacity: 1;
+  text-decoration-style: solid;
+}
+/* нужно прописывать стиль для :active или только для класса active? */
+.sorting-attributes a:active {
+  color: var(--basic-red);
+  opacity: 1;
+  text-decoration: none;
+}
+.sorting-attribute-active a {
+  color: var(--basic-red);
+  opacity: 1;
+  text-decoration: none;
+}
+.sorting-attribute-up .sorting-arrow-up {
+  transform: rotate(180deg);
+}
+.sorting-attribute-up .sorting-arrow-up path,
+.sorting-attribute-down .sorting-arrow-down path {
+  fill: var(--basic-greylight);
+  fill-opacity: 1;
+}
+.sorting-attribute-up .sorting-arrow-up:hover path,
+.sorting-attribute-down .sorting-arrow-down:hover path {
+  fill: var(--basic-black);
+  fill-opacity: 1;
 }
