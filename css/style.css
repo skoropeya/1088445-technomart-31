@@ -827,9 +827,7 @@ textarea.feedback-message:focus {
 .form-filters fieldset {
   border: none;
 }
-.filter-price legend,
-.filter-brand legend,
-.filter-power-supply legend {
+.form-filters legend {
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 17px;
@@ -837,6 +835,29 @@ textarea.feedback-message:focus {
   text-transform: uppercase;
   color: var(--basic-black);
 }
+.form-filters label {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.form-filters ul {
+  list-style: none;
+}
+
+/* fieldset class="filter-price */
+
+
+
+/* fieldset class="filter-brand" */
+
+
+
+/* fieldset class="filter-power-supply" */
+
+
+
 
 /* section MAIN-GOODS-CATALOG */
 /* div сортировки */
@@ -851,7 +872,10 @@ textarea.feedback-message:focus {
 .sorting-attributes {
   list-style: none;
 }
-.sorting-attributes a {
+.attribute-up .arrow-up {
+  transform: rotate(180deg);
+}
+.sorting-attributes .attribute-item {
   font: inherit;
   color: inherit;
   text-decoration: underline;
@@ -859,32 +883,78 @@ textarea.feedback-message:focus {
   text-decoration-color: var(--basic-red);
   opacity: 0.3;
 }
-.sorting-attributes a:hover,
-.sorting-attributes a:focus {
+.sorting-attributes .attribute-item-svg {
+  text-decoration: none;
+  opacity: 1;
+}
+.sorting-attributes .attribute-item:hover,
+.sorting-attributes .attribute-item:focus {
   opacity: 1;
   text-decoration-style: solid;
 }
-/* нужно прописывать стиль для :active или только для класса active? */
-.sorting-attributes a:active {
-  color: var(--basic-red);
-  opacity: 1;
-  text-decoration: none;
-}
-.sorting-attribute-active a {
-  color: var(--basic-red);
-  opacity: 1;
-  text-decoration: none;
-}
-.sorting-attribute-up .sorting-arrow-up {
-  transform: rotate(180deg);
-}
-.sorting-attribute-up .sorting-arrow-up path,
-.sorting-attribute-down .sorting-arrow-down path {
-  fill: var(--basic-greylight);
-  fill-opacity: 1;
-}
-.sorting-attribute-up .sorting-arrow-up:hover path,
-.sorting-attribute-down .sorting-arrow-down:hover path {
+.sorting-attributes .attribute-item-svg:hover path,
+.sorting-attributes .attribute-item-svg:focus path {
   fill: var(--basic-black);
-  fill-opacity: 1;
+}
+
+/* нужно прописывать стиль для состояния :active или только для класса attribute-active? */
+
+.sorting-attributes .attribute-item:active,
+.sorting-attributes .attribute-active {
+  color: var(--basic-red);
+  opacity: 1;
+  text-decoration: none;
+}
+.sorting-attributes .attribute-item-svg:active path,
+.sorting-attributes .attribute-item-svg.attribute-active path {
+  fill: var(--basic-red);
+}
+
+/* ul PAGINATION-LIST */
+
+.pagination-list {
+  list-style: none;
+}
+.pagination-item a {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--basic-black);
+  background: transparent;
+  border: 1px solid var(--border-btn-white);
+  border-radius: 2px;
+}
+.pagination-item a:hover,
+.pagination-item a:focus {
+  border-color: var(--basic-greylight);
+}
+.pagination-item a:active {
+  border-color: var(--basic-red);
+}
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  color: var(--basic-white);
+  background: var(--basic-red);
+  border-color: var(--basic-red);
+}
+
+/* section ABOUT-GOODS */
+
+.about-goods {
+  background-color: var(--basic-background);
+}
+.about-goods h2 {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.about-goods p {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  color: var(--basic-black);
 }

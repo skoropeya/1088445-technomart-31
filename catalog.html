@@ -160,27 +160,27 @@
             <div class="goods-catalog-sort">
                 <span class="catalog-sort-title">Сортировка:</span>
                 <ul class="sorting-attributes">
-                  <li class="sorting-attribute-price sorting-attribute-active">
-                    <a href="#">По цене</a>
+                  <li>
+                    <a href="#" class="attribute-item attribute-price attribute-active">По цене</a>
                   </li>
-                  <li class="sorting-attribute-type">
-                    <a href="#">По типу</a>
+                  <li>
+                    <a href="#" class="attribute-item attribute-type">По типу</a>
                   </li>
-                  <li class="sorting-attribute-function">
-                    <a href="#">По функционалу</a>
+                  <li>
+                    <a href="#" class="attribute-item attribute-function">По функционалу</a>
                   </li>
-                  <li class="sorting-attribute-up sorting-attribute-active">
-                    <a href="#">
+                  <li>
+                    <a href="#" class="attribute-item attribute-item-svg attribute-up attribute-active">
                       <span class="visually-hidden">По возрастанию</span>
-                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="sorting-arrow-up">
+                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-up">
                         <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5"/>
                       </svg>
                     </a>
                   </li>
-                  <li class="sorting-attribute-down">
-                    <a href="#">
+                  <li>
+                    <a href="#" class="attribute-item attribute-item-svg attribute-down">
                       <span class="visually-hidden">По убыванию</span>
-                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="sorting-arrow-down">
+                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-down">
                         <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5"/>
                       </svg>
                     </a>
@@ -295,6 +295,11 @@
             </ul>
 
             <ul class="pagination-list">
+              <!-- первый элемент списка скрыт, когда мы на первой странице -->
+                <li class="pagination-item visually-hidden">
+                  <a href="blank.html" class="btn-page btn-previous">Предыдущая</a>
+                </li>
+
                 <li class="pagination-item pagination-item-current">
                     <a>1</a>
                 </li>
@@ -308,11 +313,9 @@
                 </li>
 
                 <li class="pagination-item">
-                    <a href="blank.html" class="btn-white">Следующая</a>
+                    <a href="blank.html" class="btn-page btn-next">Следующая</a>
                 </li>
             </ul>
-
-
         </section>
 
         <section class="about-goods">
