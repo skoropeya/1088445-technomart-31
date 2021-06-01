@@ -181,6 +181,8 @@ img {
   opacity: 0.5;
 }
 .close-modal {
+  width: 21px;
+  height: 21px;
   border: none;
   background-color: transparent;
   background-image: url("../img/icon/icon-close.svg");
@@ -199,16 +201,12 @@ img {
   list-style: none;
 }
 .users-menu .users-menu-link {
+  position: relative;
   color: inherit;
 }
 .users-menu-order {
   background-color: var(--basic-green);
   text-align: center;
-}
-.users-menu-marks:active,
-.users-menu-basket:active {
-  color: rgba(255, 255, 255, 0.5);
-  background-color: var(--dark-blue);
 }
 .users-menu-link-notempty {
   background-color: var(--basic-red);
@@ -216,21 +214,44 @@ img {
 .users-menu-link-notempty:active {
   background-color: var(--basic-red);
 }
-
-.users-menu-marks,
-.users-menu-basket {
-  padding-left: 20px;
-}
-.users-menu-marks{
+.users-menu-marks::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -15px;
+  width: 14px;
+  height: 16px;
   background-image: url("../img/icon/icon-bookmark.svg");
-  background-position: left center;
   background-repeat: no-repeat;
+  opacity: 0.3;
 }
-.users-menu-basket {
+.users-menu-basket::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -16px;
+  width: 15px;
+  height: 15px;
   background-image: url("../img/icon/icon-basket.svg");
-  background-position: left center;
   background-repeat: no-repeat;
+  opacity: 0.3;
 }
+.users-menu-marks:hover::before,
+.users-menu-marks:focus::before,
+.users-menu-basket:hover::before,
+.users-menu-basket:focus::before {
+  opacity: 1;
+}
+.users-menu-marks:active,
+.users-menu-basket:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--dark-blue);
+}
+.users-menu-marks:active::before,
+.users-menu-basket:active::before {
+  opacity: 0.3;
+}
+
 .users-menu-order:hover,
 .users-menu-order:focus {
   background-color: var(--green-hover);
@@ -307,19 +328,50 @@ img {
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
-.btn-user:hover,
-.btn-user:focus {
+.btn-enter:hover,
+.btn-enter:focus,
+.btn-registration:hover,
+.btn-registration:focus {
   color: var(--basic-red);
 }
-.btn-user:active {
+.btn-enter:active,
+.btn-registration:active,
+.btn-profile:active {
   color: var(--basic-greylight);
 }
-.btn-enter .svg-icon-login path{
+.svg-icon-login path,
+.svg-icon-user path,
+.svg-icon-logout path {
   fill: var(--basic-greylight);
 }
-.btn-enter:hover .svg-icon-login path,
-.btn-enter:focus .svg-icon-login path {
+.btn-user:hover .svg-icon-login path,
+.btn-user:focus .svg-icon-login path,
+.btn-user:hover .svg-icon-user path,
+.btn-user:focus .svg-icon-user path,
+.btn-user:hover .svg-icon-logout path,
+.btn-user:focus .svg-icon-logout path {
   fill: var(--more-grey);
+}
+.btn-user:active .svg-icon-login path,
+.btn-user:active .svg-icon-user path,
+.btn-user:active .svg-icon-logout path {
+  fill: var(--basic-greylight);
+}
+.header-user-links {
+  list-style: none;
+}
+.header-user-links .user-link {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--basic-grey);
+}
+.header-user-links .user-link:hover,
+.header-user-links .user-link:focus {
+  color: var(--basic-red);
+}
+.header-user-links .user-link:active {
+  color: var(--basic-greylight);
 }
 
 .header-nav-list {
