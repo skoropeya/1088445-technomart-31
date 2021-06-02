@@ -92,13 +92,13 @@
             <form action="https://echo.htmlacademy.ru" method="get" class="form-filters">
                 <fieldset class="filter-price">
                     <legend>Цена:</legend>
-                    <!-- здесь долен быть бегунок -->
-                    <p>
-                        <label for="filter-price-range-min" class="visually-hidden"></label>
-                        <input type="text" name="filter-price-range-min" id="filter-price-range-min" value="0"> -
-                        <label for="filter-price-range-max" class="visually-hidden"></label>
-                        <input type="text" name="filter-price-range-max" id="filter-price-range-max" value="30000">
-                    </p>
+                    <div class="filter-price-range">Бегунок</div>
+                    <div class="filter-price-input">
+                        <label for="price-range-min" class="visually-hidden">Минимальная цена</label>
+                        <input type="text" name="price-range-min" id="price-range-min" value="0"> -
+                        <label for="price-range-max" class="visually-hidden">Максимальная цена</label>
+                        <input type="text" name="price-range-max" id="price-range-max" value="30000">
+                    </div>
                 </fieldset>
 
                 <fieldset class="filter-brand">
@@ -148,7 +148,7 @@
                     </ul>
 
                 </fieldset>
-                <button type="submit" class="btn-white btn-show">Показать</button>
+                <button type="submit" class="btn btn-show">Показать</button>
 
             </form>
 
@@ -330,8 +330,10 @@
         <section class="modal modal-in-basket">
             <h2>Товар добавлен в корзину!</h2>
             <button type="button" class="close-modal"><span class="visually-hidden">Закрыть</span></button>
-            <button type="button" class="btn btn-red btn-make-order">Оформить заказ</button>
-            <button type="button" class="btn btn-more-shopping">Продолжить покупки</button>
+            <div class="submit-wrapper">
+              <button type="button" class="btn btn-red btn-make-order">Оформить заказ</button>
+              <button type="button" class="btn btn-white btn-more-shopping">Продолжить покупки</button>
+            </div>
         </section>
     </main>
 
