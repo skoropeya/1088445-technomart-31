@@ -184,6 +184,9 @@ img {
 
 /* HEADER */
 
+.main-header-logo:active .svg-header-logo rect {
+  fill: var(--red-active);
+}
 .main-header-top {
   font-size: 18px;
   background-color: var(--dark-grey);
@@ -893,18 +896,24 @@ img {
   fill: var(--basic-black);
 }
 
-/* нужно прописывать стиль для состояния :active или только для класса attribute-active? */
-
-.sorting-attributes .attribute-item:active,
-.sorting-attributes .attribute-active {
+.sorting-attributes .attribute-item:active {
   color: var(--basic-red);
   opacity: 1;
   text-decoration: none;
 }
-.sorting-attributes .attribute-item-svg:active path,
-.sorting-attributes .attribute-item-svg.attribute-active path {
+/* .sorting-attributes .attribute-active {
+  color: var(--basic-red);
+  opacity: 1;
+  text-decoration: none;
+} */
+
+.sorting-attributes .attribute-item-svg:active path {
   fill: var(--basic-red);
 }
+/* .sorting-attributes .attribute-item-svg.attribute-active path {
+  fill: var(--basic-red);
+} */
+
 
 /* ul PAGINATION-LIST */
 
