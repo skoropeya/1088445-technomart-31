@@ -220,7 +220,7 @@ img {
 }
 .main-header-bottom {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 .main-header-user {
@@ -554,6 +554,8 @@ img {
   opacity: 0.25;
 }
 .promo-item h3 {
+  margin-top: 20px;
+  margin-left: 23px;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -563,9 +565,11 @@ img {
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
+  opacity: 1;
 }
 .promo-sliders-item p {
   font-size: 18px;
+  opacity: 1;
 }
 
 .promo-item {
@@ -628,12 +632,16 @@ img {
   grid-template-columns: 1fr 220px;
   gap: 20px;
   background-color: var(--basic-title);
+  margin-bottom: 20px;
 }
 .popular-goods-wrapper a {
   justify-self: center;
   align-self: center;
 }
 .popular-goods h2 {
+  margin-top: 29px;
+  margin-bottom: 30px;
+  margin-left: 28px;
   font-size: 30px;
   line-height: 30px;
   font-weight: normal;
@@ -711,12 +719,16 @@ img {
   grid-template-columns: 1fr 220px;
   gap: 20px;
   background-color: var(--basic-title);
+  margin-bottom: 20px;
 }
 .brands-wrapper a {
   justify-self: center;
   align-self: center;
 }
 .brands h2 {
+  margin-top: 29px;
+  margin-bottom: 30px;
+  margin-left: 28px;
   font-size: 30px;
   line-height: 30px;
   font-weight: normal;
