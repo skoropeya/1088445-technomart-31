@@ -812,7 +812,7 @@ img {
 }
 .wrapper-nav-and-list {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 300px 1fr;
   gap: 20px;
 }
 .services-nav,
@@ -850,7 +850,6 @@ img {
   background-color: var(--basic-white);
 }
 .services-list-item {
-  width: 620px;
   height: 290px;
 }
 .services-list-item h3 {
@@ -890,13 +889,14 @@ img {
 
 /* section ABOUT */
 
-.about .container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
+.about {
   margin-bottom: 70px;
 }
-
+.wrapper-about {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+}
 .about h3 {
   margin: 0px;
   font-size: 30px;
@@ -909,9 +909,6 @@ img {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   color: var(--basic-black);
-}
-.about-company p {
-  width: 460px;
 }
 
 .transport-companies {
