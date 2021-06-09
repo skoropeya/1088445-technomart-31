@@ -297,7 +297,7 @@
                 <section class="contacts-company">
                   <h3>Контакты</h3>
                   <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-                  <a href="blank.html"><img src="img/map.png" alt="Офис Техномарт на карте" width="300" height="158"></a>
+                  <a href="blank.html" class="btn-map"><img src="img/map.png" alt="Офис Техномарт на карте" width="300" height="158"></a>
                   <a href="blank.html" class="btn btn-red">Заблудились? Напишите нам!</a>
                 </section>
               </div>
@@ -306,26 +306,28 @@
 
         <!-- Всплывающее окно формы обратной связи, по умолчанию скрыто -->
         <section class="modal modal-feedback">
-          <h2 class="visually-hidden">Заполните форму обратной связи</h2>
-          <button type="button" class="close-modal"><span class="visually-hidden">Закрыть</span></button>
+          <div class="modal-container">
+            <h2 class="visually-hidden">Заполните форму обратной связи</h2>
+            <button type="button" class="close-modal"><span class="visually-hidden">Закрыть</span></button>
 
-          <form action="https://echo.htmlacademy.ru" method="POST" class="form-feedback">
-            <div class="form-feedback-wrapper name-wrapper">
-              <label for="feedback-name">Ваше имя:</label>
-              <input type="text" id="feedback-name" class="feedback-name" placeholder="Имя Фамилия">
-            </div>
-            <div class="form-feedback-wrapper email-wrapper">
-              <label for="feedback-email">Ваш e-mail:</label>
-              <input type="email" id="feedback-email" class="feedback-email" placeholder="email@example.com">
-            </div>
-            <div class="form-feedback-wrapper message-wrapper">
-              <label for="feedback-message">Ваш e-mail:</label>
-              <textarea name="feedback-message" id="feedback-message" class="feedback-message" cols="30" rows="10">В свободной форме</textarea>
-            </div>
-            <div class="form-feedback-wrapper submit-wrapper">
-              <button type="submit" class="btn btn-red">Отправить</button>
-            </div>
-          </form>
+            <form action="https://echo.htmlacademy.ru" method="POST" class="form-feedback">
+              <div class="form-feedback-wrapper name-wrapper">
+                <label for="feedback-name">Ваше имя:</label>
+                <input type="text" id="feedback-name" class="feedback-name" placeholder="Имя Фамилия">
+              </div>
+              <div class="form-feedback-wrapper email-wrapper">
+                <label for="feedback-email">Ваш e-mail:</label>
+                <input type="email" id="feedback-email" class="feedback-email" placeholder="email@example.com">
+              </div>
+              <div class="form-feedback-wrapper message-wrapper">
+                <label for="feedback-message">Ваш e-mail:</label>
+                <textarea name="feedback-message" id="feedback-message" class="feedback-message" cols="30" rows="10">В свободной форме</textarea>
+              </div>
+              <div class="form-feedback-wrapper submit-wrapper">
+                <button type="submit" class="btn btn-red">Отправить</button>
+              </div>
+            </form>
+          </div>
         </section>
 
     </main>
