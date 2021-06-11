@@ -1154,20 +1154,21 @@ img {
   list-style: none;
 }
 .bread-crumbs-item {
+  position: relative;
+  margin-right: 40px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-black);
 }
+.bread-crumbs-item:last-child {
+  margin-right: 0px;
+}
 .bread-crumbs-item a {
-  position: relative;
   color: inherit;
-  margin-right: 40px;
 }
-.bread-crumbs-item a:not(:last-child) {
-  margin-right: 40px;
-}
+
 .bread-crumbs-home a {
   display: block;
   width: 14px;
@@ -1176,7 +1177,7 @@ img {
   background-position: left center;
   background-repeat: no-repeat;
 }
-.bread-crumbs-item a::after {
+.bread-crumbs-item::after {
   content: "";
   position: absolute;
   top: 0px;
@@ -1186,7 +1187,7 @@ img {
   background-image: url("../img/icon/icon-right-small.svg");
   background-repeat: no-repeat;
 }
-.bread-crumbs-current a::after{
+.bread-crumbs-current::after{
   background: none;
 }
 
