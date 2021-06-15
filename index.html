@@ -111,7 +111,7 @@
                         <a href="catalog.html" class="btn btn-red">Открыть каталог</a>
                       </li>
                       <!-- скрытый слайд -->
-                      <!-- <li class="promo-sliders-item visually-hidden">
+                      <li class="promo-sliders-item">
                         <div class="promo-slider-wrapper">
                           <h3>Дрели</h3>
                           <p>Соседям на радость!</p>
@@ -119,12 +119,15 @@
 
                         <img src="img/promo-drills.jpg" alt="Рабочий с дрелью" width="620" height="266">
                         <a href="catalog.html" class="btn btn-red">Открыть каталог</a>
-                      </li> -->
+                      </li>
                     </ul>
-                    <button type="button" class="btn-left">Влево</button>
-                    <button type="button" class="btn-right">Вправо</button>
-                    <button type="button" class="btn-slide btn-slide-1">Слайд 1</button>
-                    <button type="button" class="btn-slide btn-slide-2">Слайд 2</button>
+                    <button type="button" class="arrow-for-slider btn-left" aria-label="Влево"></button>
+                    <button type="button" class="arrow-for-slider btn-right" aria-label="Вправо"></button>
+                    <div class="slider-controls">
+                      <!-- кнопка, соответсвующая текущему слайду имеет дополнительный класс btn-slide-open-->
+                      <button type="button" class="btn-slide btn-slide-1 btn-slide-open" aria-label="Слайд 1"></button>
+                      <button type="button" class="btn-slide btn-slide-2" aria-label="Слайд 2"></button>
+                    </div>
                 </li>
                 <!-- остальные элементы списка -->
                 <li class="promo-item promo-item-materials promo-item-new">
@@ -269,19 +272,19 @@
                 <!-- открытый слайд имеет дополнительный класс services-list-item-open-->
                 <li class="services-list-item services-list-item-delivery services-list-item-open">
                   <h3>Доставка</h3>
-                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж!</p>
                 </li>
                 <!-- скрытые слайды -->
-                <!-- <li class="services-list-item services-list-item-guarantee">
+                <li class="services-list-item services-list-item-guarantee">
                   <h3>Гарантия</h3>
                   <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-                </li> -->
+                </li>
 
-                <!-- <li class="services-list-item services-list-item-credit">
+                <li class="services-list-item services-list-item-credit">
                   <h3>Кредит</h3>
                   <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
                   <a href="blank.html" class="btn btn-red">Отправить заявку</a>
-                </li> -->
+                </li>
               </ul>
               </div>
             </div>
@@ -292,7 +295,7 @@
               <div class="wrapper-box">
                 <h2 class="visually-hidden">О компании</h2>
                 <section class="about-company">
-                  <h3>Компания "Техномарт"</h3>
+                  <h3>Компания &laquo;Техномарт&raquo;</h3>
                   <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
                   <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>Техномарт работает со многими транспортными компаниями:</p>
                   <ul class="transport-companies">
