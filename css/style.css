@@ -1125,6 +1125,7 @@ img {
 }
 .services-list-item {
   height: 290px;
+  position: relative;
   /* скрываем все слайды */
   display: none;
 }
@@ -1147,31 +1148,43 @@ img {
   font-size: 13px;
   color: var(--basic-black);
 }
-.services-list-item-delivery {
-  background-color: var(--basic-background);
+.services-list-item-delivery::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 1px;
+  width: 468px;
+  height: 261px;
   background-image: url("../img/services-delivery.png");
-  /* подобрать значение background-position */
-  background-position: right 25px;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .services-list-item-delivery p {
   width: 280px;
 }
-.services-list-item-guarantee {
-  background-color: var(--basic-background);
+.services-list-item-guarantee::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -8px;
+  width: 389px;
+  height: 283px;
   background-image: url("../img/services-guarantee.png");
-  /* подобрать значение background-position */
-  background-position: 239px 2px;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .services-list-item-guarantee p {
   width: 318px;
 }
-.services-list-item-credit {
-  background-color: var(--basic-background);
+.services-list-item-credit::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -10px;
+  width: 465px;
+  height: 285px;
   background-image: url("../img/services-credit.png");
-  /* подобрать значение background-position */
-  background-position: 165px 3px;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .services-list-item-credit p {
@@ -1307,9 +1320,9 @@ img {
 .bread-crumbs-home a {
   display: block;
   width: 14px;
-  height: 12px;
+  height: 18px;
   background-image: url("../img/icon/icon-home.svg");
-  background-position: left center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 .bread-crumbs-item::after {
@@ -1680,23 +1693,14 @@ textarea.feedback-message:focus {
 
 /* MODAL-IN-BASKET */
 
-.modal-in-basket .modal-container {
-  height: 275px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+.modal-in-basket .close-modal {
+  top: 11px;
 }
-/* .modal-in-basket .close-modal {
-  order: -1;
-  align-self: flex-end;
-  margin-top: 11px;
-  margin-right: 11px;
-} */
 .modal-in-basket h2 {
   position: relative;
   margin: 0px;
-  margin-top: 34px;
-  margin-bottom: auto;
+  margin-top: 66px;
+  margin-bottom: 67px;
   padding: 0px;
   font-weight: bold;
   font-size: 24px;
@@ -1715,7 +1719,6 @@ textarea.feedback-message:focus {
   background-repeat: no-repeat;
 }
 .modal-in-basket .submit-wrapper {
-  /* justify-items: flex-end; */
   height: 112px;
   width: 100%;
   display: flex;
