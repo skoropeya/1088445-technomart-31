@@ -229,6 +229,9 @@ img {
 .main-header {
   margin-bottom: 60px;
 }
+.page-body-catalog .main-header {
+  margin-bottom: 21px;
+}
 .main-header-top {
   font-size: 18px;
   color: var(--basic-white);
@@ -929,6 +932,20 @@ img {
 .good-item .btn-mark {
   margin-bottom: auto;
 }
+/* по умолчанию кнопки скрыты */
+ .btn-buy,
+ .btn-mark {
+  display: none;
+}
+/* при наведении на карточку товара, изображение скрывается, кнопки появляются */
+.good-item:hover img {
+  display: none;
+}
+.good-item:hover .btn-buy,
+.good-item:hover .btn-mark {
+  display: block;
+}
+
 .good-item h3 {
   margin: 0px;
   margin-bottom: auto;
@@ -1319,20 +1336,25 @@ img {
 
 .bread-crumbs-home a {
   display: block;
+  padding-top: 3px;
+  padding-bottom: 3px;
   width: 14px;
-  height: 18px;
+  height: 12px;
   background-image: url("../img/icon/icon-home.svg");
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .bread-crumbs-item::after {
   content: "";
   position: absolute;
   top: 0px;
-  right: -17px;
+  right: -25px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   width: 8px;
-  height: 14px;
+  height: 12px;
   background-image: url("../img/icon/icon-right-small.svg");
+  background-position: center;
   background-repeat: no-repeat;
 }
 .bread-crumbs-current::after{
@@ -1369,6 +1391,9 @@ img {
   line-height: 30px;
 }
 .form-filters label {
+  position: relative;
+  display: block;
+  cursor: pointer;
   font-size: 15px;
   line-height: 19px;
 }
@@ -1425,8 +1450,24 @@ img {
 .filter-brand-item:not(:last-child) {
   margin-bottom: 20px;
 }
-.filter-brand-item input:disabled + label {
+.filter-brand-item label {
+  margin-left: 35px;
+}
+.brand-input-checkbox:disabled + label {
   opacity: 0.4;
+}
+.brand-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/icon/checkbox-off.svg");
+}
+.brand-input-checkbox:checked + label::before {
+  width: 27px;
+  background-image: url("../img/icon/checkbox-on.svg");
 }
 
 /* fieldset class="filter-power-supply" */
@@ -1437,8 +1478,23 @@ img {
 .filter-power-supply-item:not(:last-child) {
   margin-bottom: 22px;
 }
-.filter-power-supply-item input:disabled + label {
+.filter-power-supply label {
+  margin-left: 35px;
+}
+.brand-input-radio:disabled + label {
   opacity: 0.4;
+}
+.brand-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/icon/radio-off.svg");
+}
+.brand-input-radio:checked + label::before {
+  background-image: url("../img/icon/radio-on.svg");
 }
 
 /* section MAIN-GOODS-CATALOG */
