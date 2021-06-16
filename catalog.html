@@ -123,12 +123,19 @@
                 <form action="https://echo.htmlacademy.ru" method="get" class="form-filters">
                     <fieldset class="filter-price">
                         <legend>Цена:</legend>
-                        <div class="filter-price-range">Бегунок</div>
-                        <div class="filter-price-input">
-                            <label for="price-range-min" class="visually-hidden">Минимальная цена</label>
+                        <div class="filter-price-range">
+                          <div class="price-scale">
+                            <div class="price-scale-bar">
+                              <button type="button" class="toggle toggle-min"></button>
+                              <button type="button" class="toggle toggle-max"></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter-price-controls">
+                            <label for="price-range-min" aria-label="Минимальная цена"></label>
                             <input type="text" name="price-range-min" id="price-range-min" value="0">
-                            <span> - </span>
-                            <label for="price-range-max" class="visually-hidden">Максимальная цена</label>
+                            <span>-</span>
+                            <label for="price-range-max" aria-label="Максимальная цена"></label>
                             <input type="text" name="price-range-max" id="price-range-max" value="30000">
                         </div>
                     </fieldset>

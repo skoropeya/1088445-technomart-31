@@ -80,6 +80,7 @@
   --another-grey: #F4F4F4;
   --one-more-grey: #F1F1F1;
   --need-more-grey: #B5B5B5;
+  --toggle-grey: #ABABAB;
   --blue-grey: #405069;
   --more-grey: #3D546F;
   --special-yellow: #FFBF47;
@@ -1438,16 +1439,53 @@ img {
   margin-bottom: 11px;
 }
 .filter-price-range {
+  box-sizing: border-box;
   width: 100%;
-  height: 80px;
+  padding: 39px 20px;
   margin-bottom: 9px;
   border-radius: 3px;
   background-color: var(--sort-filters);
 }
-.filter-price-input span {
-  line-height: 38px;
+.price-scale {
+  height: 2px;
+  background-color: var(--basic-greylight);
 }
-.filter-price-input input {
+.price-scale-bar {
+  position: relative;
+  width: 78%;
+  height: 2px;
+  background-color: var(--basic-green);
+}
+.price-scale-bar .toggle {
+  display: block;
+  position: absolute;
+  top: -10px;
+  width: 4px;
+  height: 4px;
+  padding: 0px;
+  border: 8px solid var(--basic-white);
+  border-radius: 50%;
+  background-color: var(--toggle-grey);
+  box-shadow: 0 2px 0 0 rgba(171, 171, 171, 0.3);
+  cursor: pointer;
+}
+.price-scale-bar .toggle-min {
+  left: -10px;
+}
+.price-scale-bar .toggle-max {
+  right: -10px;
+}
+
+.filter-price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+.filter-price-controls span {
+  width: 30px;
+  line-height: 38px;
+  text-align: center;
+}
+.filter-price-controls input {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -1487,16 +1525,14 @@ img {
   width: 27px;
   background-image: url("../img/icon/checkbox-on.svg");
 }
-
-.filter-brand-item:hover .brand-input-checkbox + label::before,
-.filter-brand-item:focus .brand-input-checkbox + label::before {
+.brand-input-checkbox + label:hover::before,
+.brand-input-checkbox + label:focus::before {
   background-image: url("../img/icon/checkbox-off-hover.svg");
 }
-.filter-brand-item:hover .brand-input-checkbox:checked + label::before,
-.filter-brand-item:focus .brand-input-checkbox:checked + label::before {
+.brand-input-checkbox:checked + label:hover::before,
+.brand-input-checkbox:checked + label:focus::before {
   background-image: url("../img/icon/checkbox-on-hover.svg");
 }
-
 .brand-input-checkbox:disabled + label {
   opacity: 0.4;
 }
@@ -1535,12 +1571,12 @@ img {
   outline: 4px solid var(--basic-greylight);
   background-color: var(--basic-greylight);
 }
-.filter-power-supply-item:hover .brand-input-radio + label::before,
-.filter-power-supply-item:focus .brand-input-radio + label::before {
+.brand-input-radio + label:hover::before,
+.brand-input-radio + label:focus::before {
   outline: 4px solid var(--need-more-grey);
 }
-.filter-power-supply-item:hover .brand-input-radio:checked + label::before,
-.filter-power-supply-item:focus .brand-input-radio:checked + label::before {
+.brand-input-radio:checked + label:hover::before,
+.brand-input-radio:checked + label:focus::before {
   outline: 4px solid var(--need-more-grey);
   background-color: var(--need-more-grey);
 }
