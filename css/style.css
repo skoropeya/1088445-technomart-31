@@ -192,10 +192,26 @@ img {
 }
 
 .btn-buy {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  text-align: left;
+  padding-left: 53px;
   width: 135px;
   background-color: var(--basic-green);
   box-shadow: inset 0px -3px 0px var(--green-shadow);
   border-radius: 2px;
+  position: relative;
+}
+
+.btn-buy::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon/icon-basket.svg");
+  opacity: 0.3;
 }
 .btn-buy:hover,
 .btn-buy:focus {
@@ -206,6 +222,8 @@ img {
 }
 
 .btn-mark {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
   box-sizing: border-box;
   width: 135px;
   padding-top: 8px;
@@ -1264,7 +1282,7 @@ img {
 .transport-companies li::before {
   content: "";
   position: absolute;
-  top: 14px;
+  top: 12px;
   left: 0px;
   width: 25px;
   height: 2px;
@@ -1453,7 +1471,9 @@ img {
 .filter-brand-item label {
   margin-left: 35px;
 }
-.brand-input-checkbox + label::before {
+
+
+/* .brand-input-checkbox + label::before {
   content: "";
   position: absolute;
   left: -35px;
@@ -1461,14 +1481,14 @@ img {
   width: 23px;
   height: 23px;
   background-image: url("../img/icon/checkbox-off.svg");
-}
-.brand-input-checkbox:checked + label::before {
+} */
+/* .brand-input-checkbox:checked + label::before {
   width: 27px;
   background-image: url("../img/icon/checkbox-on.svg");
-}
-.brand-input-checkbox:disabled + label {
+} */
+/* .brand-input-checkbox:disabled + label {
   opacity: 0.4;
-}
+} */
 
 /* fieldset class="filter-power-supply" */
 .filter-power-supply legend {
@@ -1735,6 +1755,7 @@ textarea.feedback-message {
   box-sizing: border-box;
   width: 100%;
   padding-left: 10px;
+  padding-right: 10px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1751,6 +1772,7 @@ input.feedback-email {
 textarea.feedback-message {
   min-height: 114px;
   padding-top: 6px;
+  padding-bottom: 6px;
 }
 input.feedback-name:focus,
 input.feedback-email:focus,
