@@ -146,8 +146,11 @@ img {
 
 .btn {
   display: block;
+  box-sizing: border-box;
   padding-top: 11px;
   padding-bottom: 9px;
+  padding-left: 5px;
+  padding-right: 5px;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
@@ -215,7 +218,6 @@ img {
 .btn-mark {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
-  box-sizing: border-box;
   width: 135px;
   padding-top: 8px;
   padding-bottom: 6px;
@@ -580,6 +582,7 @@ img {
   height: 68px;
 }
 .main-footer-address {
+  margin-left: 3px;
   font-style: normal;
   color: var(--address-grey);
 }
@@ -799,13 +802,14 @@ img {
 }
 .promo-sliders-item h3 {
   margin-top: 23px;
+  margin-bottom: 5px;
   margin-left: 24px;
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
 }
 .promo-sliders-item p {
-  margin-top: 5px;
+  margin: 0px;
   margin-left: 23px;
   font-size: 18px;
 }
@@ -934,6 +938,10 @@ img {
   width: 218px;
   height: 177px;
   order: -1;
+}
+.wrapper-good-image img {
+  object-fit: contain;
+  background-color: var(--basic-white);
 }
 .good-item .btn-buy {
   margin-top: 38px;
@@ -1186,7 +1194,7 @@ img {
   background-repeat: no-repeat;
 }
 .services-list-item-delivery p {
-  width: 280px;
+  width: 300px;
 }
 .services-list-item-guarantee::after {
   content: "";
@@ -1200,7 +1208,7 @@ img {
   background-repeat: no-repeat;
 }
 .services-list-item-guarantee p {
-  width: 318px;
+  width: 330px;
 }
 .services-list-item-credit::after {
   content: "";
@@ -1214,7 +1222,7 @@ img {
   background-repeat: no-repeat;
 }
 .services-list-item-credit p {
-  width: 280px;
+  width: 310px;
   margin-bottom: 27px;
 }
 .services-list-item-credit .btn {
