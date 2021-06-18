@@ -104,6 +104,7 @@ body {
   min-height: 100%;
   /* разбиваем на 3 строки: header, main, footer */
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
@@ -137,7 +138,8 @@ img {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -261,7 +263,8 @@ img {
 .main-header-bottom .wrapper-box {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 40px;
 }
 .main-header-nav {
@@ -359,6 +362,14 @@ img {
   border: none;
   color: var(--basic-white);
   background-color: transparent;
+}
+.header-form-search .input-search-message::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;;
+}
+.header-form-search .input-search-message::-moz-placeholder {
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;;
 }
 .header-form-search .input-search-message::placeholder {
   color: rgba(255, 255, 255, 1);
@@ -716,6 +727,7 @@ img {
 .promo-list {
   display: grid;
   grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(3, -webkit-min-content);
   grid-template-rows: repeat(3, min-content);
   gap: 20px;
 }
@@ -940,7 +952,8 @@ img {
   order: -1;
 }
 .wrapper-good-image img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   background-color: var(--basic-white);
 }
 .good-item .btn-buy {
@@ -981,7 +994,8 @@ img {
   margin: 0px;
   font-size: 17px;
   line-height: 18px;
-  text-decoration-line: line-through;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
   text-transform: uppercase;
   color: var(--del-text);
 }
@@ -1625,8 +1639,10 @@ img {
 .attribute-item a {
   color: inherit;
   text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: var(--basic-red);
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+  -webkit-text-decoration-color: var(--basic-red);
+          text-decoration-color: var(--basic-red);
   opacity: 0.3;
 }
 .attribute-item .attribute-item-svg {
@@ -1636,7 +1652,8 @@ img {
 .attribute-item a:hover,
 .attribute-item a:focus {
   opacity: 1;
-  text-decoration-style: solid;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
 }
 .attribute-item .attribute-item-svg:hover path,
 .attribute-item .attribute-item-svg:focus path {
@@ -1773,14 +1790,15 @@ img {
 .modal-feedback {
   display: none;
   top: auto;
-  bottom: 350px;  /* позиционировать от нижнего края? */
+  bottom: 350px;
   width: 620px;
   padding-top: 39px;
 }
 .form-feedback  {
   display: grid;
   grid-template-columns: repeat(2, 300px);
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 13px;
 }
 .form-feedback .name-wrapper {
@@ -1827,6 +1845,14 @@ img {
   border: 2px solid var(--basic-greylight);
   border-radius: 2px;
 }
+.feedback-name::-webkit-input-placeholder, .feedback-email::-webkit-input-placeholder, .feedback-message::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(169, 169, 169, 1);
+}
+.feedback-name::-moz-placeholder, .feedback-email::-moz-placeholder, .feedback-message::-moz-placeholder {
+  opacity: 1;
+  color: rgba(169, 169, 169, 1);
+}
 .feedback-name::placeholder,
 .feedback-email::placeholder,
 .feedback-message::placeholder {
@@ -1859,7 +1885,7 @@ img {
 .modal-map {
   display: none;
   top: auto;
-  bottom: 330px;  /* позиционировать от нижнего края? */
+  bottom: 330px;
   width: 943px;
   height: 449px;
 }
