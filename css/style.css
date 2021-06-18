@@ -1554,8 +1554,8 @@ img {
 .brand-input-radio + label::before {
   content: "";
   position: absolute;
-  left: -31px;
-  top: 1px;
+  left: -35px;
+  top: -2px;
   width: 25px;
   height: 25px;
   background-image: url("../img/icon/radio-off.svg");
