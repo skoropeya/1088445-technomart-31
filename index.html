@@ -309,7 +309,7 @@
                 <section class="contacts-company">
                   <h3>Контакты</h3>
                   <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-                  <a href="blank.html" class="btn-map"><img src="img/map.png" alt="Офис Техномарт на карте" width="300" height="158"></a>
+                  <a href="blank.html" class="btn-map"><img src="img/map.png" alt="Техномарт по адресу г. Санкт-Петербург, наб. Реки Карповки, 5 лит П" width="300" height="158"></a>
                   <a href="blank.html" class="btn btn-red">Заблудились? Напишите нам!</a>
                 </section>
               </div>
@@ -318,9 +318,8 @@
 
         <!-- Всплывающее окно формы обратной связи, по умолчанию скрыто -->
         <section class="modal modal-feedback">
-          <div class="modal-container">
             <h2 class="visually-hidden">Заполните форму обратной связи</h2>
-            <button type="button" class="close-modal"><span class="visually-hidden">Закрыть</span></button>
+            <button type="button" class="close-modal" aria-label="Закрыть"></button>
 
             <form action="https://echo.htmlacademy.ru" method="POST" class="form-feedback">
               <div class="form-feedback-wrapper name-wrapper">
@@ -339,7 +338,12 @@
                 <button type="submit" class="btn btn-red">Отправить</button>
               </div>
             </form>
-          </div>
+        </section>
+
+        <section class="modal modal-map">
+          <h2 class="visually-hidden">Магазин Техномарт на карте</h2>
+          <button type="button" class="close-modal" aria-label="Закрыть"></button>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822446556373!2d30.315220216320142!3d59.968268666669836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1624003748454!5m2!1sru!2sru" width="943" height="449" style="border:0;" allowfullscreen="" loading="lazy" title="Техномарт по адресу г. Санкт-Петербург, наб. Реки Карповки, 5 лит П"></iframe>
         </section>
 
     </main>

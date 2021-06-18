@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page-body-catalog">
+  <body class="page-body page-body-catalog">
 
     <header class="main-header">
         <section class="main-header-top">
@@ -380,14 +380,12 @@
 
         <!-- всплывающее окно "Товар добавлен в корзину" по умолчанию скрыто -->
         <section class="modal modal-in-basket">
-          <div class="modal-container">
             <h2>Товар добавлен в корзину!</h2>
-            <button type="button" class="close-modal"><span class="visually-hidden">Закрыть</span></button>
+            <button type="button" class="close-modal" aria-label="Закрыть"></button>
             <div class="submit-wrapper">
               <button type="button" class="btn btn-red btn-make-order">Оформить заказ</button>
               <button type="button" class="btn btn-white btn-more-shopping">Продолжить покупки</button>
             </div>
-          </div>
         </section>
     </main>
 
