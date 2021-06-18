@@ -1532,7 +1532,7 @@ img {
   opacity: 1;
 }
 .brand-input-checkbox:disabled + label {
-  opacity: 0.4;
+  color: rgba(0, 0, 0, 0.4);
 }
 .brand-input-checkbox:disabled + label::before {
   opacity: 0.3;
@@ -1568,7 +1568,7 @@ img {
   opacity: 1;
 }
 .brand-input-radio:disabled + label {
-  opacity: 0.4;
+  color: rgba(0, 0, 0, 0.4);
 }
 .brand-input-radio:disabled + label::before {
   opacity: 0.3;
