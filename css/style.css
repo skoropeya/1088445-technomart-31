@@ -1519,30 +1519,25 @@ img {
   position: absolute;
   left: -35px;
   top: -3px;
-  width: 23px;
+  width: 24px;
   height: 23px;
   background-image: url("../img/icon/checkbox-off.svg");
+  opacity: 0.78;
 }
 .brand-input-checkbox:checked + label::before {
   width: 27px;
   background-image: url("../img/icon/checkbox-on.svg");
+  opacity: 0.78;
 }
 .brand-input-checkbox + label:hover::before,
 .brand-input-checkbox + label:focus::before {
-  background-image: url("../img/icon/checkbox-off-hover.svg");
-}
-.brand-input-checkbox:checked + label:hover::before,
-.brand-input-checkbox:checked + label:focus::before {
-  background-image: url("../img/icon/checkbox-on-hover.svg");
+  opacity: 1;
 }
 .brand-input-checkbox:disabled + label {
   opacity: 0.4;
 }
 .brand-input-checkbox:disabled + label::before {
-  background-image: url("../img/icon/checkbox-off-hover.svg");
-}
-.brand-input-checkbox:checked:disabled + label::before {
-  background-image: url("../img/icon/checkbox-on-hover.svg");
+  opacity: 0.3;
 }
 
 /* fieldset class="filter-power-supply" */
@@ -1561,26 +1556,18 @@ img {
   position: absolute;
   left: -31px;
   top: 1px;
-  width: 9px;
-  height: 9px;
-  border: 4px solid transparent;
-  outline: 4px solid var(--basic-greylight);
-  border-radius: 50%;
-  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/icon/radio-off.svg");
+  opacity: 0.78;
 }
 .brand-input-radio:checked + label::before {
-  border: 4px solid var(--basic-white);
-  outline: 4px solid var(--basic-greylight);
-  background-color: var(--basic-greylight);
+  background-image: url("../img/icon/radio-on.svg");
+  opacity: 0.78;
 }
 .brand-input-radio + label:hover::before,
 .brand-input-radio + label:focus::before {
-  outline: 4px solid var(--need-more-grey);
-}
-.brand-input-radio:checked + label:hover::before,
-.brand-input-radio:checked + label:focus::before {
-  outline: 4px solid var(--need-more-grey);
-  background-color: var(--need-more-grey);
+  opacity: 1;
 }
 .brand-input-radio:disabled + label {
   opacity: 0.4;
