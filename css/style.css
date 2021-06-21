@@ -656,7 +656,7 @@ img {
   flex-wrap: wrap;
   margin: 0;
   margin-left: 70px;
-  margin-top: 4px;
+  margin-top: 5px;
   padding: 0;
   list-style: none;
 }
@@ -885,8 +885,8 @@ img {
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 60px;
-  height: 59px;
+  width: 70px;
+  height: 70px;
   background-image: url("../img/promo-new.png");
   background-repeat: no-repeat;
 }
@@ -1032,15 +1032,15 @@ img {
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 60px;
-  height: 59px;
+  width: 70px;
+  height: 70px;
   background-image: url("../img/promo-new.png");
   background-repeat: no-repeat;
 }
 
 /* section BRANDS */
 .brands {
-  margin-bottom: 67px;
+  margin-bottom: 70px;
 }
 
 .brands-wrapper {
@@ -1076,7 +1076,7 @@ img {
   list-style: none;
 }
 .brands-item {
-  height: 145px;
+  height: 143px;
   border: 1px solid var(--border-card);
 }
 .brands-item a {
