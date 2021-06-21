@@ -408,9 +408,12 @@ img {
 }
 .main-header-contact {
   justify-self: left;
+  padding-top: 3px;
 }
 .main-header-phone {
   display: block;
+  box-sizing: border-box;
+  width: 270px;
   margin-bottom: 3px;
   font-weight: bold;
   font-size: 21px;
@@ -430,9 +433,9 @@ img {
 .main-header-user {
   justify-self: right;
   height: 75px;
+  display: flex;
 }
 .btn-user {
-  display: inline-block;
   box-sizing: border-box;
   height: 45px;
   font-size: 21px;
@@ -442,14 +445,16 @@ img {
   background-color: var(--basic-white);
 }
 .btn-enter {
+  display: flex;
+  align-items: center;
   margin-right: 10px;
-  padding: 12px 27px 12px 19px;
+  padding: 14px 27px 10px 19px;
 }
 .btn-enter .svg-icon-login {
-  margin-right: 5px;
+  margin-right: 6px;
 }
 .btn-registration {
-  padding: 12px 24px;
+  padding: 14px 24px 10px;
 }
 
 .wrapper-btn-user{
@@ -715,7 +720,7 @@ img {
 
 .promo {
   color: var(--basic-white);
-  margin-bottom: 60px;
+  margin-bottom: 59px;
 }
 .promo-list,
 .promo-sliders-list {
@@ -744,9 +749,12 @@ img {
   position: relative;
 }
 .promo-item-sliders .slider-controls {
-  width: 100%;
+  width: 25%;
+  margin: 0 auto;
   position: absolute;
   bottom: 36px;
+  left: 0px;
+  right: 0px;
   display: flex;
   justify-content: center;
 }
@@ -839,35 +847,35 @@ img {
   background-color: var(--special-yellow);
   background-image: url("../img/icon/promo-materials.svg");
   /* подобрать значение background-position */
-  background-position: 85% center;
+  background-position: 83% center;
   background-repeat: no-repeat;
 }
 .promo-item-tools {
   background-color: var(--special-blue);
   background-image: url("../img/icon/promo-tools.svg");
   /* подобрать значение background-position */
-  background-position: 85% center;
+  background-position: 86% center;
   background-repeat: no-repeat;
 }
 .promo-item-technics {
   background-color: var(--special-lilac);
   background-image: url("../img/icon/promo-technics.svg");
   /* подобрать значение background-position */
-  background-position: 85% center;
+  background-position: 86% center;
   background-repeat: no-repeat;
 }
 .promo-item-discounts {
   background-color: var(--special-greenlight);
   background-image: url("../img/icon/promo-discounts.svg");
   /* подобрать значение background-position */
-  background-position: 85% center;
+  background-position: 81% center;
   background-repeat: no-repeat;
 }
 .promo-item-delivery {
   background-color: var(--special-yellow);
   background-image: url("../img/icon/promo-delivery.svg");
   /* подобрать значение background-position */
-  background-position: 85% center;
+  background-position: 86% center;
   background-repeat: no-repeat;
 }
 /* красная метка с надписью NEW */
@@ -885,7 +893,7 @@ img {
 /* section POPULAR-GOODS */
 
 .popular-goods {
-  margin-bottom: 70px;
+  margin-bottom: 68px;
 }
 .popular-goods-wrapper {
   display: grid;
@@ -1000,9 +1008,13 @@ img {
   color: var(--del-text);
 }
 .good-item .good-item-new-price {
+  align-self: flex-start;
   margin: 0px;
   margin-bottom: 21px;
   margin-top: auto;
+  margin-left: 45px;
+  padding-left: 32px;
+  text-align: left;
   font-size: 17px;
   /* высоту строки увеличиваем до высоты блока для выравнивания по вертикали */
   line-height: 38px;
@@ -1027,7 +1039,7 @@ img {
 
 /* section BRANDS */
 .brands {
-  margin-bottom: 70px;
+  margin-bottom: 67px;
 }
 
 .brands-wrapper {
