@@ -656,6 +656,7 @@ img {
   flex-wrap: wrap;
   margin: 0;
   margin-left: 70px;
+  margin-top: 4px;
   padding: 0;
   list-style: none;
 }
@@ -695,7 +696,7 @@ img {
 }
 .main-footer-feedback {
   margin: 0;
-  margin-right: 51px;
+  margin-right: 53px;
 }
 .main-footer-developed {
   margin: 0;
@@ -1099,7 +1100,7 @@ img {
 
 .services {
   background-color: var(--basic-background);
-  margin-bottom: 70px;
+  margin-bottom: 68px;
   padding-top: 64px;
 }
 .services h2 {
@@ -1292,6 +1293,7 @@ img {
 .transport-companies {
   margin: 0;
   margin-bottom: 20px;
+  margin-top: 2px;
   padding: 0;
   list-style: none;
 }
