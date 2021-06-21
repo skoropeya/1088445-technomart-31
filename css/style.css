@@ -435,6 +435,9 @@ img {
   height: 75px;
   display: flex;
 }
+.main-header-user-authorization {
+  flex-direction: column;
+}
 .btn-user {
   box-sizing: border-box;
   height: 45px;
@@ -461,12 +464,13 @@ img {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 .btn-profile {
   width: 258px;
   display: flex;
-  padding-top: 12px;
+  align-items: center;
+  padding-top: 5px;
 }
 .btn-profile .svg-icon-user {
   margin-left: 15px;
@@ -477,7 +481,7 @@ img {
   margin-right: auto;
 }
 .btn-exit {
-  padding-top: 14px;
+  padding-top: 15px;
   padding-left: 5px;
   padding-right: 17px;
 }
@@ -926,7 +930,8 @@ img {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 18px;
 }
 
 .popular-goods-list {
@@ -1530,8 +1535,8 @@ img {
 
 /* fieldset class="filter-brand" */
 .filter-brand legend {
-  margin-top: 16px;
-  margin-bottom: 15px;
+  margin-top: 13px;
+  margin-bottom: 19px;
 }
 .filter-brand-item:not(:last-child) {
   margin-bottom: 20px;
@@ -1568,8 +1573,8 @@ img {
 
 /* fieldset class="filter-power-supply" */
 .filter-power-supply legend {
-  margin-top: 18px;
-  margin-bottom: 21px;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 .filter-power-supply-item:not(:last-child) {
   margin-bottom: 22px;
@@ -1709,7 +1714,7 @@ img {
   list-style: none;
 }
 .pagination-item:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 11px;
 }
 .pagination-item a {
   display: block;
@@ -1748,7 +1753,7 @@ img {
 
 .about-goods {
   padding-top: 64px;
-  padding-bottom: 68px;
+  padding-bottom: 57px;
   background-color: var(--basic-background);
 }
 
