@@ -471,6 +471,7 @@ img {
   display: flex;
   align-items: center;
   padding-top: 5px;
+  padding-left: 3px;
 }
 .btn-profile .svg-icon-user {
   margin-left: 15px;
@@ -884,15 +885,33 @@ img {
   background-repeat: no-repeat;
 }
 /* красная метка с надписью NEW */
+.promo-item-new {
+  overflow: hidden;
+}
 .promo-item-new::after {
-  content: "";
+  /* content: "";
   position: absolute;
   top: 0px;
   right: 0px;
   width: 70px;
   height: 70px;
   background-image: url("../img/promo-new.png");
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+
+  content: "new";
+  position: absolute;
+  top: 7px;
+  right: -27px;
+  width: 100px;
+  height: 30px;
+  background-color: var(--basic-red);
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--basic-white);
+  transform: rotate(45deg);
 }
 
 /* section POPULAR-GOODS */
@@ -930,7 +949,8 @@ img {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 18px;
 }
 
@@ -952,6 +972,7 @@ img {
   text-align: center;
   color: var(--basic-black);
   border: 1px solid var(--border-card);
+  overflow: hidden;
 }
 .good-item:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -1033,14 +1054,29 @@ img {
 }
 /* красная метка с надписью NEW */
 .good-item-new::after {
-  content: "";
+  /* content: "";
   position: absolute;
   top: 0px;
   right: 0px;
   width: 70px;
   height: 70px;
   background-image: url("../img/promo-new.png");
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+
+  content: "new";
+  position: absolute;
+  top: 7px;
+  right: -27px;
+  width: 100px;
+  height: 30px;
+  background-color: var(--basic-red);
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--basic-white);
+  transform: rotate(45deg);
 }
 
 /* section BRANDS */
@@ -1473,6 +1509,7 @@ img {
   box-sizing: border-box;
   width: 100%;
   padding: 39px 20px;
+  padding: 39px 20px;
   margin-bottom: 9px;
   border-radius: 3px;
   background-color: var(--sort-filters);
@@ -1501,10 +1538,10 @@ img {
   cursor: pointer;
 }
 .price-scale-bar .toggle-min {
-  left: -10px;
+  left: -1px;
 }
 .price-scale-bar .toggle-max {
-  right: -10px;
+  right: -20px;
 }
 
 .filter-price-controls {
@@ -1561,7 +1598,7 @@ img {
   opacity: 0.78;
 }
 .brand-input-checkbox + label:hover::before,
-.brand-input-checkbox + label:focus::before {
+.brand-input-checkbox:focus + label::before {
   opacity: 1;
 }
 .brand-input-checkbox:disabled + label {
@@ -1597,7 +1634,7 @@ img {
   opacity: 0.78;
 }
 .brand-input-radio + label:hover::before,
-.brand-input-radio + label:focus::before {
+.brand-input-radio:focus + label::before {
   opacity: 1;
 }
 .brand-input-radio:disabled + label {
