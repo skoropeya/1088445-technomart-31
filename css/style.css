@@ -1792,10 +1792,11 @@ img {
 .modal {
   display: none;
   position: fixed;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  bottom: auto;
   left: 0;
   right: 0;
+  transform: translateY(-50%);
   box-sizing: border-box;
   margin: auto;
   padding: 0;
@@ -1822,8 +1823,6 @@ img {
 
 .modal-feedback {
   display: none;
-  top: auto;
-  bottom: 350px;
   width: 620px;
   padding-top: 39px;
 }
@@ -1856,7 +1855,7 @@ img {
   background-color: var(--another-grey);
 }
 .modal-feedback label {
-  display: block;
+  display: none;
   margin-bottom: 11px;
   font-size: 18px;
   color: var(--basic-black);
@@ -1917,8 +1916,6 @@ img {
 
 .modal-map {
   display: none;
-  top: auto;
-  bottom: 330px;
   width: 943px;
   height: 449px;
 }
@@ -1933,8 +1930,6 @@ img {
 
 .modal-in-basket {
   display: none;
-  top: 335px;
-  bottom: auto;
   width: 620px;
   height: 283px;
   padding-top: 66px;
