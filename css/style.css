@@ -889,15 +889,6 @@ img {
   overflow: hidden;
 }
 .promo-item-new::after {
-  /* content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 70px;
-  height: 70px;
-  background-image: url("../img/promo-new.png");
-  background-repeat: no-repeat; */
-
   content: "new";
   position: absolute;
   top: 7px;
@@ -1003,12 +994,15 @@ img {
  .btn-mark {
   display: none;
 }
-/* при наведении на карточку товара, изображение скрывается, кнопки появляются */
-.good-item:hover img {
+/* при наведении на карточку товара или при фокусе на карточку изображение скрывается, кнопки появляются */
+.good-item:hover img,
+.good-item:focus-within img {
   display: none;
 }
 .good-item:hover .btn-buy,
-.good-item:hover .btn-mark {
+.good-item:hover .btn-mark,
+.good-item:focus-within .btn-buy,
+.good-item:focus-within .btn-mark {
   display: block;
 }
 
@@ -1054,15 +1048,6 @@ img {
 }
 /* красная метка с надписью NEW */
 .good-item-new::after {
-  /* content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 70px;
-  height: 70px;
-  background-image: url("../img/promo-new.png");
-  background-repeat: no-repeat; */
-
   content: "new";
   position: absolute;
   top: 7px;
@@ -1716,24 +1701,16 @@ img {
   fill: var(--basic-black);
 }
 
-.attribute-item a:active {
+.attribute-item a:active,
+.attribute-active a {
   color: var(--basic-red);
   opacity: 1;
   text-decoration: none;
 }
-/* .attribute-item.attribute-active a {
-  color: var(--basic-red);
-  opacity: 1;
-  text-decoration: none;
-} */
-
-.attribute-item .attribute-item-svg:active path {
+.attribute-item .attribute-item-svg:active path,
+.attribute-active path {
   fill: var(--basic-red);
 }
-/* .attribute-item.attribute-active path {
-  fill: var(--basic-red);
-} */
-
 
  /* ul GOODS-LIST */
 
