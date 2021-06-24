@@ -1804,6 +1804,9 @@ img {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
   border-top: 7px solid var(--basic-red);
 }
+.open-modal {
+  display: block;
+}
 .close-modal {
   padding: 0px;
   position: absolute;
@@ -1822,7 +1825,6 @@ img {
 /* MODAL-FEEDBACK */
 
 .modal-feedback {
-  display: none;
   width: 620px;
   padding-top: 39px;
 }
@@ -1915,7 +1917,6 @@ img {
 /* MODAL-MAP */
 
 .modal-map {
-  display: none;
   width: 943px;
   height: 449px;
 }
@@ -1929,7 +1930,6 @@ img {
 /* MODAL-IN-BASKET */
 
 .modal-in-basket {
-  display: none;
   width: 620px;
   height: 283px;
   padding-top: 66px;
