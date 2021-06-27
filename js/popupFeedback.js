@@ -2,9 +2,13 @@ const modalFeedback = document.querySelector(".modal-feedback");
 const openFeedback = document.querySelector(".open-modal-feedback");
 const closeFeedback = modalFeedback.querySelector(".close-modal-feedback");
 const formFeedback = modalFeedback.querySelector(".form-feedback");
+
 const nameFeedback = modalFeedback.querySelector(".feedback-name");
 const emailFeedback = modalFeedback.querySelector(".feedback-email");
 const messageFeedback = modalFeedback.querySelector(".feedback-message");
+
+// найти все поля в форме
+const fieldsFormFeedback = modalFeedback.querySelectorAll(".feedback-field");
 
 let isStorageSupport = true;
 let storageName = "";
@@ -19,16 +23,35 @@ try {
   isStorageSupport = false;
 }
 
+// поставить автофокус в первое пустое поле в форме
+function putFocus(fields) {
+  for (let i=0; i < fields.length; i++) {
+    if (!fields[i].value) {
+      fields[i].focus();
+      return
+    }
+  }
+return
+};
+
+// поменять цвет рамки у пустых полей
+function markEmptyField(fields) {
+  for (let i=0; i < fields.length; i++) {
+    if (!fields[i].value) {
+      fields[i].style.borderColor = "#BA2732";
+    } else {
+      fields[i].style.borderColor = "#C5C5C5";
+    }
+  }
+return
+};
+
 openFeedback.addEventListener("click", function(evt) {
   evt.preventDefault();
   modalFeedback.classList.add("open-modal");
-  if (!nameFeedback.value) {
-    nameFeedback.focus();
-  } else if (!emailFeedback.value) {
-    emailFeedback.focus();
-  } else {
-    messageFeedback.focus();
-  }
+
+  putFocus(fieldsFormFeedback);
+
   if (storageName) {
     nameFeedback.value = storageName;
   }
@@ -43,16 +66,19 @@ openFeedback.addEventListener("click", function(evt) {
 closeFeedback.addEventListener("click", function(evt) {
   evt.preventDefault();
   modalFeedback.classList.remove("open-modal");
-  formFeedback.classList.remove("error-form");
+  modalFeedback.classList.remove("error-form");
 });
-
 
 formFeedback.addEventListener("submit", function(evt) {
   if (!nameFeedback.value || !emailFeedback.value || !messageFeedback.value) {
     evt.preventDefault();
-    formFeedback.classList.remove("error-form");
-    formFeedback.offsetWidth = formFeedback.offsetWidth;
-    formFeedback.classList.add("error-form");
+    modalFeedback.classList.remove("error-form");
+    modalFeedback.offsetWidth = formFeedback.offsetWidth;
+    modalFeedback.classList.add("error-form");
+
+    putFocus(fieldsFormFeedback);
+    markEmptyField(fieldsFormFeedback);
+
   } else {
     if (isStorageSupport) {
       localStorage.setItem("name", nameFeedback.value);
@@ -67,7 +93,7 @@ window.addEventListener("keydown", function(evt) {
     if (modalFeedback.classList.contains("open-modal")) {
       evt.preventDefault();
       modalFeedback.classList.remove("open-modal");
-      formFeedback.classList.remove("error-form");
+      modalFeedback.classList.remove("error-form");
     }
   }
 });

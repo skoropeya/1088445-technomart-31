@@ -1800,11 +1800,13 @@ img {
 }
 .open-modal {
   display: block;
-  animation: appear 1s;
+  -webkit-animation: appear 1s;
+          animation: appear 1s;
 }
 /* добавляем анимацию для неправильно заполненной формы */
 .error-form {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 .close-modal {
   padding: 0px;
@@ -1906,7 +1908,7 @@ img {
 .feedback-name:focus,
 .feedback-email:focus,
 .feedback-message:focus {
-  border: 2px solid var(--del-text);
+  border: 2px solid var(--dark-grey);
   outline: none;
 }
 .modal-feedback .btn-red{
@@ -1975,6 +1977,16 @@ img {
   color: var(--basic-black);
 }
 /* анимация для появления модального окна */
+@-webkit-keyframes appear {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+}
 @keyframes appear {
   0% {
     transform: translateY(1000px);
@@ -1987,22 +1999,41 @@ img {
 }
 
 /* анимация для неправильно заполненной формы */
-@keyframes shake {
+@-webkit-keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    transform: translateY(-50%) translateX(0);
   }
   10%,
   30%,
   50%,
   70%,
   90% {
-    transform: translateX(-5px);
+    transform: translateY(-50%) translateX(-5px);
   }
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(5px);
+    transform: translateY(-50%) translateX(5px);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-50%) translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateY(-50%) translateX(5px);
   }
 }
