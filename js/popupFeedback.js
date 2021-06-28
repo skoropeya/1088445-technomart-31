@@ -33,23 +33,30 @@ function putFocus(fields) {
   }
 return
 };
-
-// поменять цвет рамки у пустых полей
+// поменять цвет рамки у пустых полей при валидации формы
 function markEmptyField(fields) {
   for (let i=0; i < fields.length; i++) {
     if (!fields[i].value) {
-      fields[i].style.borderColor = "#BA2732";
-    } else {
-      fields[i].style.borderColor = "#C5C5C5";
+      fields[i].classList.add("feedback-field-error");
     }
   }
 return
 };
+ // убрать выделение рамки полей
+ function cleanMarkField(fields) {
+  for (let i=0; i < fields.length; i++) {
+    if (fields[i].classList.contains("feedback-field-error")) {
+      fields[i].classList.remove("feedback-field-error");
+    }
+  }
+  return
+ };
 
 openFeedback.addEventListener("click", function(evt) {
   evt.preventDefault();
   modalFeedback.classList.add("open-modal");
 
+  cleanMarkField(fieldsFormFeedback);
   putFocus(fieldsFormFeedback);
 
   if (storageName) {
@@ -61,12 +68,6 @@ openFeedback.addEventListener("click", function(evt) {
   if (storageMessage) {
     messageFeedback.value = storageMessage;
   }
-});
-
-closeFeedback.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  modalFeedback.classList.remove("open-modal");
-  modalFeedback.classList.remove("error-form");
 });
 
 formFeedback.addEventListener("submit", function(evt) {
@@ -86,6 +87,12 @@ formFeedback.addEventListener("submit", function(evt) {
       localStorage.setItem("message", messageFeedback.value);
     }
   }
+});
+
+closeFeedback.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  modalFeedback.classList.remove("open-modal");
+  modalFeedback.classList.remove("error-form");
 });
 
 window.addEventListener("keydown", function(evt) {

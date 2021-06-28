@@ -1880,6 +1880,9 @@ img {
   border: 2px solid var(--basic-greylight);
   border-radius: 2px;
 }
+.feedback-field-error {
+  border-color: var(--basic-red);
+}
 .feedback-name::-webkit-input-placeholder, .feedback-email::-webkit-input-placeholder, .feedback-message::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(169, 169, 169, 1);
@@ -1910,6 +1913,9 @@ img {
 .feedback-message:focus {
   border: 2px solid var(--dark-grey);
   outline: none;
+}
+.feedback-field-error:focus {
+  border-color: var(--red-active);
 }
 .modal-feedback .btn-red{
   width: 460px;
